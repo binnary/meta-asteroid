@@ -1,0 +1,27 @@
+From 9e2520f9ead5dea1fc45cf2ada454390bdae37cc Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Fri, 21 Jan 2022 07:32:48 +0800
+Subject: [PATCH] fix include
+
+---
+ src/src.pro | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/src.pro b/src/src.pro
+index 1cb8c1a..b64a8c3 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -69,8 +69,9 @@ PKGCONFIG += mlite5
+ 
+ packagesExist(qdeclarative5-boostable) {
+     message("Building with qdeclarative-boostable support")
+-    SOURCES += sailfishapp_priv_boosted.cpp
++    #SOURCES += sailfishapp_priv_boosted.cpp
+ 
++    SOURCES += sailfishapp_priv_default.cpp
+     #PKGCONFIG += qdeclarative5-boostable
+     ## This gets added by qdeclarative5-boostable, but we must not have
+     ## it when building the shared library (only when the app is linked)
+-- 
+2.26.2
+

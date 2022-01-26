@@ -26,6 +26,7 @@ RDEPENDS:${PN} += "nemo-qml-plugin-social-dev"
 RDEPENDS:${PN} += "nemo-qml-plugin-systemsettings-dev"
 RDEPENDS:${PN} += "nemo-qml-plugin-thumbnailer-dev"
 RDEPENDS:${PN} += "nemo-qml-plugin-time-dev"
+RDEPENDS:${PN} += "nemo-qml-plugin-email-dev"
 RDEPENDS:${PN} += "nemo-keepalive-dev"
 
 RDEPENDS:${PN} += "glibmm-dev"

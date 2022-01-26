@@ -1,0 +1,25 @@
+From 2a4b13cb9637e60b1faa0d4bba1742e3f30a31ea Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Sun, 23 Jan 2022 21:33:40 +0800
+Subject: [PATCH] fix buid failed
+
+---
+ libresourceqt/libresourceqt.pro | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libresourceqt/libresourceqt.pro b/libresourceqt/libresourceqt.pro
+index 2807aca..742bc8d 100644
+--- a/libresourceqt/libresourceqt.pro
++++ b/libresourceqt/libresourceqt.pro
+@@ -41,7 +41,7 @@ SOURCES += src/resource.cpp \
+            src/resources.cpp \
+            src/audio-resource.cpp
+ 
+-QMAKE_CXXFLAGS += -Wall
++QMAKE_CXXFLAGS += -Wall -std=c++0x
+ LIBS += $$(DBUSQEVENTLOOPLIB)
+ 
+ OBJECTS_DIR = build
+-- 
+2.26.2
+

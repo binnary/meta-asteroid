@@ -1,0 +1,48 @@
+From 479590b0d7c3c4194d9f1f4d239775a99dcba674 Mon Sep 17 00:00:00 2001
+From: binnary <binnary@foxmail.com>
+Date: Thu, 15 Apr 2021 19:07:51 -0800
+Subject: [PATCH] temp
+
+---
+ src/sailfishapp_priv.cpp | 2 +-
+ src/src.pro              | 6 +-----
+ 2 files changed, 2 insertions(+), 6 deletions(-)
+
+diff --git a/src/sailfishapp_priv.cpp b/src/sailfishapp_priv.cpp
+index f81f5ac..b14da21 100644
+--- a/src/sailfishapp_priv.cpp
++++ b/src/sailfishapp_priv.cpp
+@@ -99,7 +99,7 @@ configureApp(QGuiApplication *app)
+ 
+     MDesktopEntry entry(QStandardPaths::locate(
+                 QStandardPaths::ApplicationsLocation, appName() + ".desktop"));
+-    if (entry.isSandboxed()) {
++    if (0) {
+         const auto section = QStringLiteral("X-Sailjail");
+         QString organizationName = entry.value(section, "OrganizationName");
+         if (organizationName.isEmpty())
+diff --git a/src/src.pro b/src/src.pro
+index 1cb8c1a..6951586 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -66,8 +66,8 @@ INSTALLS += target header
+ 
+ CONFIG += link_pkgconfig
+ PKGCONFIG += mlite5
+##PKGCONFIG += mapplauncherd-qt
+ 
+-packagesExist(qdeclarative5-boostable) {
+     message("Building with qdeclarative-boostable support")
+     SOURCES += sailfishapp_priv_boosted.cpp
+ 
+@@ -83,7 +83,3 @@ packagesExist(qdeclarative5-boostable) {
+ 
+     # Use the right linker flags when linking the app
+     QMAKE_PKGCONFIG_REQUIRES += qdeclarative5-boostable
+-} else {
+-    warning("qdeclarative-boostable not available; startup times will be slower")
+-    SOURCES += sailfishapp_priv_default.cpp
+-}
+-- 
+2.27.0
+
