@@ -1,0 +1,29 @@
+From ed8e750571c0cb756b7b906838991f7e26759ef2 Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Mon, 24 Jan 2022 22:26:58 +0800
+Subject: [PATCH] WWW:fix build new
+
+---
+ src/single-instance/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/single-instance/CMakeLists.txt b/src/single-instance/CMakeLists.txt
+index fd9be9c..1217eed 100644
+--- a/src/single-instance/CMakeLists.txt
++++ b/src/single-instance/CMakeLists.txt
+@@ -11,10 +11,10 @@ pkg_check_modules(DBUS dbus-1 REQUIRED)
+ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${DBUS_INCLUDE_DIRS} ${COMMON})
+ 
+ # Hide all symbols except the ones explicitly exported in the code (like main())
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fPIC")
++set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIE -fvisibility=hidden -fPIC")
+ 
+ # Link as position independent executable
+-set(CMAKE_EXE_LINKER_FLAGS "-pie -rdynamic")
++set(CMAKE_EXE_LINKER_FLAGS "-rdynamic -shared")
+ 
+ # Set C flags because of report.c
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fvisibility=hidden -fPIC")
+-- 
+2.26.2
+

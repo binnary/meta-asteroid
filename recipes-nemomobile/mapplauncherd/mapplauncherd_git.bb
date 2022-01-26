@@ -5,15 +5,13 @@ LIC_FILES_CHKSUM = "file://COPYING.LESSER;md5=243b725d71bb5df4a1e5920b344b86ad"
 
 SRC_URI = "git://github.com/sailfishos/mapplauncherd.git;protocol=https \
            file://0001-booster-generic-Fix-path-to-tibapplauncherd.patch \
-           file://0002-Fix-reference-to-host-lib.patch \
-           file://0003-Fix-dynamic-opening-issues.patch \
-           file://booster-generic.service"
-SRCREV = "7091378e7d1de0c26cdfcf74951ee1688f029b9d"
+           file://0001-WWW-fix-build-new.patch "
+SRCREV = "${AUTOREV}"
 PR = "r1"
 PV = "+git${SRCPV}"
 S = "${WORKDIR}/git"
 
-DEPENDS += "dbus systemd"
+DEPENDS += "dbus systemd extra-cmake-modules"
 
 inherit cmake
 B = "${S}"
@@ -30,7 +28,9 @@ do_install:append() {
         ln -s /usr/lib/systemd/user/booster-generic.service ${D}/usr/lib/systemd/user/default.target.wants/booster-generic.service
     fi
 }
-
-FILES:${PN} += "/usr/lib/systemd/user /usr/libexec/mapplauncherd/ /usr/lib/libapplauncherd.so /usr/lib/systemd/user/default.target.wants/"
+RDEPENDS:${PN} += "glib-2.0"
+RDEPENDS:${PN}-dev += "glib-2.0"
+FILES:${PN} += "/usr/lib/systemd/user /usr/libexec/mapplauncherd/ /usr/lib/lib* /usr/lib/systemd/user/default.target.wants/ "
 FILES:${PN}-dbg += "/usr/libexec/mapplauncherd/.debug"
-FILES:${PN}-dev = "/usr/include/"
+#FILES:${PN}-dev = "/usr/include/"
+FILES:${PN}-dev = "/usr/include/ /usr/lib/lib* /usr/lib/pkgconfig/applauncherd.pc"
