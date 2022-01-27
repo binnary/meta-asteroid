@@ -11,7 +11,7 @@ PR = "r1"
 PV = "+git${SRCPV}"
 S = "${WORKDIR}/git"
 
-DEPENDS += "dbus systemd extra-cmake-modules"
+DEPENDS += "dbus systemd extra-cmake-modules glib-2.0"
 
 inherit cmake
 B = "${S}"
@@ -19,7 +19,6 @@ B = "${S}"
 do_configure:prepend() {
     sed -i '/Target for documentation/,$d' ${S}/CMakeLists.txt
     sed -i 's@-L/lib -lsystemd-daemon@-lsystemd@' ${S}/src/launcherlib/CMakeLists.txt
-    cp ${WORKDIR}/booster-generic.service ${S}/src/booster-generic/booster-generic.service
 }
 
 do_install:append() {
@@ -28,9 +27,9 @@ do_install:append() {
         ln -s /usr/lib/systemd/user/booster-generic.service ${D}/usr/lib/systemd/user/default.target.wants/booster-generic.service
     fi
 }
-RDEPENDS:${PN} += "glib-2.0"
-RDEPENDS:${PN}-dev += "glib-2.0"
-FILES:${PN} += "/usr/lib/systemd/user /usr/libexec/mapplauncherd/ /usr/lib/lib* /usr/lib/systemd/user/default.target.wants/ "
+
+INSANE_SKIP:${PN}= "dev-so"
+FILES:${PN} += "/usr/lib/systemd/user /usr/libexec/mapplauncherd/ \
+/usr/lib/systemd/user/default.target.wants/ /usr/include /usr/lib"
 FILES:${PN}-dbg += "/usr/libexec/mapplauncherd/.debug"
-#FILES:${PN}-dev = "/usr/include/"
-FILES:${PN}-dev = "/usr/include/ /usr/lib/lib* /usr/lib/pkgconfig/applauncherd.pc"
+FILES:${PN}-dev = "/usr/include/ /usr/lib/pkgconfig/" 

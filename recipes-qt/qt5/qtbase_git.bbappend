@@ -3,7 +3,7 @@ SRC_URI += " file://0002-qplatforminputcontextfactory-Use-qtvirtualkeyboard-b.pa
 
 # Remove dependencies to mesa
 PACKAGECONFIG:remove = "tests"
-PACKAGECONFIG:remove = "widgets"
+#PACKAGECONFIG:remove = "widgets"
 PACKAGECONFIG:remove = "gl"
 PACKAGECONFIG:append = "gles2 mtdev sql-sqlite glib fontconfig gif"
 PACKAGECONFIG_GL:append:qemux86 = " eglfs gbm kms"
