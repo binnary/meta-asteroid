@@ -1,0 +1,58 @@
+From 517dd6281cf5061ad3da476071dd9b6c87e26cc2 Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Sun, 23 Jan 2022 21:49:26 +0800
+Subject: [PATCH] fix
+
+---
+ qtpim.pro                 | 2 ++
+ src/contacts/contacts.pro | 1 +
+ src/src.pro               | 2 ++
+ src/versit/versit.pro     | 1 +
+ 4 files changed, 6 insertions(+)
+
+diff --git a/qtpim.pro b/qtpim.pro
+index 2d70b157..8988d853 100644
+--- a/qtpim.pro
++++ b/qtpim.pro
+@@ -1,2 +1,4 @@
++
++QMAKE_CXXFLAGS += -Wall -std=c++0x
+ load(qt_parts)
+ 
+diff --git a/src/contacts/contacts.pro b/src/contacts/contacts.pro
+index c1ee07ff..8d4ffc92 100644
+--- a/src/contacts/contacts.pro
++++ b/src/contacts/contacts.pro
+@@ -5,6 +5,7 @@ MODULE_PLUGIN_TYPES = \
+     contacts
+ 
+ QMAKE_DOCS = $$PWD/doc/qtcontacts.qdocconf
++QMAKE_CXXFLAGS += -Wall -std=c++0x
+ 
+ include(details/details.pri)
+ include(engines/engines.pri)
+diff --git a/src/src.pro b/src/src.pro
+index ce7eeecc..168bcc2d 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -1,3 +1,5 @@
++QMAKE_CXXFLAGS += -Wall -std=c++0x
++
+ TEMPLATE = subdirs
+ CONFIG  += ordered
+ SUBDIRS = contacts organizer versit versitorganizer plugins $$PWD/../tests
+diff --git a/src/versit/versit.pro b/src/versit/versit.pro
+index 06093a18..67b8d285 100644
+--- a/src/versit/versit.pro
++++ b/src/versit/versit.pro
+@@ -1,6 +1,7 @@
+ TARGET = QtVersit
+ QT = core contacts
+ 
++QMAKE_CXXFLAGS += -Wall -std=c++0x
+ MODULE_PLUGIN_TYPES = \
+     versit
+ 
+-- 
+2.26.2
+

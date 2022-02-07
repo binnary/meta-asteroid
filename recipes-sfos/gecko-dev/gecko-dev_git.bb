@@ -1,0 +1,2095 @@
+# Recipe created by recipetool
+# This is the basis of a recipe and may need further editing in order to be fully functional.
+# (Feel free to remove these comments when editing.)
+
+SUMMARY = "Netscape Portable Runtime"
+# WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
+# your responsibility to verify that the values are complete and correct.
+#
+# The following license files were not able to be identified and are
+# represented as "Unknown" below, you will need to check them yourself:
+#   gecko-dev/LICENSE
+#   gecko-dev/LEGAL
+#   gecko-dev/extensions/spellcheck/hunspell/src/license.hunspell
+#   gecko-dev/extensions/spellcheck/hunspell/src/license.myspell
+#   gecko-dev/mobile/android/geckoview/src/thirdparty/java/org/mozilla/thirdparty/com/google/android/exoplayer2/drm/OfflineLicenseHelper.java
+#   gecko-dev/gfx/ycbcr/LICENSE
+#   gecko-dev/gfx/cairo/cairo/COPYING
+#   gecko-dev/gfx/cairo/libpixman/COPYING
+#   gecko-dev/gfx/harfbuzz/COPYING
+#   gecko-dev/gfx/harfbuzz/src/ms-use/COPYING
+#   gecko-dev/gfx/vr/service/openvr/LICENSE
+#   gecko-dev/gfx/wgpu/LICENSE
+#   gecko-dev/gfx/wr/LICENSE
+#   gecko-dev/gfx/wr/wr_malloc_size_of/LICENSE-APACHE
+#   gecko-dev/gfx/wr/peek-poke/LICENSE-MIT
+#   gecko-dev/gfx/wr/peek-poke/LICENSE-APACHE
+#   gecko-dev/gfx/wr/peek-poke/peek-poke-derive/LICENSE-MIT
+#   gecko-dev/gfx/wr/peek-poke/peek-poke-derive/LICENSE-APACHE
+#   gecko-dev/gfx/wr/wrench/reftests/text/Proggy-License.txt
+#   gecko-dev/gfx/skia/LICENSE
+#   gecko-dev/gfx/skia/skia/include/third_party/vulkan/LICENSE
+#   gecko-dev/gfx/skia/skia/include/third_party/skcms/LICENSE
+#   gecko-dev/gfx/skia/skia/third_party/skcms/LICENSE
+#   gecko-dev/gfx/graphite2/COPYING
+#   gecko-dev/gfx/ots/LICENSE
+#   gecko-dev/python/mozbuild/mozbuild/test/test_licenses.py
+#   gecko-dev/layout/reftests/w3c-css/LICENSE
+#   gecko-dev/layout/reftests/fonts/loadtest-license.txt
+#   gecko-dev/layout/reftests/fonts/Chunkfive-license.txt
+#   gecko-dev/layout/reftests/fonts/glyphwiki-license.txt
+#   gecko-dev/layout/reftests/fonts/mplus/mplus-license.txt
+#   gecko-dev/layout/reftests/fonts/sil/Gentium-license.txt
+#   gecko-dev/layout/reftests/fonts/sil/Charis-license.txt
+#   gecko-dev/layout/reftests/fonts/sil/ScheherazadeRegOT-license.txt
+#   gecko-dev/mfbt/lz4/LICENSE
+#   gecko-dev/mfbt/double-conversion/double-conversion/LICENSE
+#   gecko-dev/remote/test/puppeteer/LICENSE
+#   gecko-dev/remote/test/puppeteer/utils/testserver/LICENSE
+#   gecko-dev/remote/test/puppeteer/utils/testrunner/LICENSE
+#   gecko-dev/remote/test/puppeteer/experimental/puppeteer-firefox/LICENSE
+#   gecko-dev/tools/lint/license.yml
+#   gecko-dev/tools/lint/test/test_file_license.py
+#   gecko-dev/tools/lint/license/valid-licenses.txt
+#   gecko-dev/tools/lint/eslint/eslint-plugin-mozilla/LICENSE
+#   gecko-dev/tools/lint/eslint/eslint-plugin-spidermonkey-js/LICENSE
+#   gecko-dev/tools/fuzzing/libfuzzer/LICENSE.TXT
+#   gecko-dev/ipc/chromium/src/LICENSE
+#   gecko-dev/ipc/chromium/src/third_party/libevent/LICENSE
+#   gecko-dev/ipc/chromium/src/third_party/libevent/cmake/Copyright.txt
+#   gecko-dev/ipc/chromium/src/third_party/libevent/cmake/COPYING-CMAKE-SCRIPTS
+#   gecko-dev/modules/freetype2/LICENSE.TXT
+#   gecko-dev/modules/freetype2/docs/LICENSE.TXT
+#   gecko-dev/image/test/reftest/bmp/bmpsuite/COPYING.txt
+#   gecko-dev/nsprpub/pkg/solaris/common_files/copyright
+#   gecko-dev/toolkit/mozapps/extensions/content/OpenH264-license.txt
+#   gecko-dev/toolkit/mozapps/update/updater/bspatch/LICENSE
+#   gecko-dev/toolkit/components/extensions/schemas/LICENSE
+#   gecko-dev/toolkit/components/normandy/vendor/LICENSE_THIRDPARTY
+#   gecko-dev/toolkit/components/reputationservice/chromium/LICENSE
+#   gecko-dev/toolkit/components/jsoncpp/LICENSE
+#   gecko-dev/toolkit/components/protobuf/COPYING.txt
+#   gecko-dev/toolkit/themes/LICENSE
+#   gecko-dev/toolkit/themes/shared/aboutLicense.css
+#   gecko-dev/toolkit/themes/shared/illustrations/about-license.svg
+#   gecko-dev/toolkit/crashreporter/google-breakpad/LICENSE
+#   gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/curl/COPYING
+#   gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/libdisasm/LICENSE
+#   gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/musl/COPYRIGHT
+#   gecko-dev/toolkit/content/license.html
+#   gecko-dev/toolkit/content/tests/browser/browser_license_links.js
+#   gecko-dev/js/src/ctypes/libffi/LICENSE
+#   gecko-dev/js/src/tests/test262/LICENSE
+#   gecko-dev/media/webrtc/trunk/LICENSE
+#   gecko-dev/media/webrtc/trunk/third_party/gflags/LICENSE
+#   gecko-dev/media/libopus/COPYING
+#   gecko-dev/media/libtheora/COPYING
+#   gecko-dev/media/libtheora/LICENSE
+#   gecko-dev/media/libtremor/COPYING
+#   gecko-dev/media/libwebp/COPYING
+#   gecko-dev/media/libyuv/LICENSE
+#   gecko-dev/media/libyuv/libyuv/LICENSE_THIRD_PARTY
+#   gecko-dev/media/libyuv/libyuv/LICENSE
+#   gecko-dev/media/libvpx/libvpx/LICENSE
+#   gecko-dev/media/libvpx/libvpx/third_party/libyuv/LICENSE
+#   gecko-dev/media/libvpx/libvpx/third_party/googletest/src/LICENSE
+#   gecko-dev/media/libvpx/libvpx/third_party/x86inc/LICENSE
+#   gecko-dev/media/libogg/COPYING
+#   gecko-dev/media/kiss_fft/COPYING
+#   gecko-dev/media/libjpeg/LICENSE.md
+#   gecko-dev/media/libmkv/LICENSE
+#   gecko-dev/media/libspeex_resampler/COPYING
+#   gecko-dev/media/libvorbis/COPYING
+#   gecko-dev/media/libcubeb/LICENSE
+#   gecko-dev/media/mtransport/third_party/nrappkit/COPYRIGHT
+#   gecko-dev/media/libsoundtouch/LICENSE
+#   gecko-dev/media/libnestegg/LICENSE
+#   gecko-dev/media/libpng/LICENSE
+#   gecko-dev/media/openmax_dl/LICENSE
+#   gecko-dev/docs/code-quality/lint/linters/license.rst
+#   gecko-dev/netwerk/srtp/src/LICENSE
+#   gecko-dev/devtools/shared/acorn/LICENSE
+#   gecko-dev/devtools/shared/storage/vendor/JSON5_LICENSE
+#   gecko-dev/devtools/shared/qrcode/decoder/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-splitter/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-source-map/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-utils/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-components/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-reps/LICENSE
+#   gecko-dev/devtools/client/debugger/packages/devtools-wasm-dwarf/LICENSE
+#   gecko-dev/devtools/client/inspector/fonts/test/OstrichLicense.txt
+#   gecko-dev/devtools/client/shared/sourceeditor/codemirror/LICENSE
+#   gecko-dev/devtools/client/shared/vendor/D3_LICENSE
+#   gecko-dev/security/sandbox/chromium/LICENSE
+#   gecko-dev/security/sandbox/chromium/base/third_party/valgrind/LICENSE
+#   gecko-dev/security/sandbox/chromium/base/third_party/dmg_fp/LICENSE
+#   gecko-dev/security/sandbox/chromium/base/third_party/icu/LICENSE
+#   gecko-dev/security/sandbox/chromium/base/third_party/dynamic_annotations/LICENSE
+#   gecko-dev/security/sandbox/chromium/base/third_party/superfasthash/LICENSE
+#   gecko-dev/security/nss/COPYING
+#   gecko-dev/security/nss/gtests/google_test/gtest/LICENSE
+#   gecko-dev/security/nss/lib/freebl/mpi/doc/LICENSE
+#   gecko-dev/security/nss/lib/freebl/mpi/doc/LICENSE-MPL
+#   gecko-dev/security/nss/lib/freebl/scripts/LICENSE
+#   gecko-dev/security/nss/pkg/solaris/common_files/copyright
+#   gecko-dev/servo/components/hashglobe/LICENSE-APACHE
+#   gecko-dev/servo/components/malloc_size_of/LICENSE-APACHE
+#   gecko-dev/dom/webauthn/winwebauthn/LICENSE
+#   gecko-dev/dom/webauthn/cbor-cpp/src/LICENSE
+#   gecko-dev/dom/webauthn/tests/pkijs/LICENSE
+#   gecko-dev/dom/canvas/test/webgl-conf/checkout/deqp/LICENSE
+#   gecko-dev/dom/canvas/test/webgl-conf/checkout/py/lint/LICENSE
+#   gecko-dev/dom/canvas/test/webgl-conf/checkout/closure-library/LICENSE
+#   gecko-dev/dom/u2f/tests/pkijs/LICENSE
+#   gecko-dev/dom/encoding/test/stringencoding-license.txt
+#   gecko-dev/dom/tests/mochitest/ajax/jquery/GPL-LICENSE.txt
+#   gecko-dev/browser/LICENSE
+#   gecko-dev/browser/extensions/pdfjs/LICENSE
+#   gecko-dev/browser/extensions/pdfjs/content/web/cmaps/LICENSE
+#   gecko-dev/browser/components/extensions/schemas/LICENSE
+#   gecko-dev/browser/components/aboutlogins/content/third-party/LICENSE
+#   gecko-dev/browser/components/pocket/content/panels/license.txt
+#   gecko-dev/browser/components/newtab/vendor/REACT_TRANSITION_GROUP_LICENSE
+#   gecko-dev/browser/branding/official/LICENSE
+#   gecko-dev/browser/themes/LICENSE
+#   gecko-dev/browser/base/content/overrides/app-license.html
+#   gecko-dev/parser/expat/COPYING
+#   gecko-dev/parser/xml/test/unit/CC-BY-LICENSE
+#   gecko-dev/parser/htmlparser/tests/mochitest/html5lib_tree_construction/html5lib_license.txt
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-persistent-license-events.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-invalid-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-persistent-license-events.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-destroy-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-invalid-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-temporary-license-type.https.html.ini
+#   gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-retrieve-persistent-license.https.html.ini
+#   gecko-dev/testing/web-platform/tests/LICENSE.md
+#   gecko-dev/testing/web-platform/tests/LICENSE
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-destroy-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-invalid-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-persistent-license-events.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-persistent-license-events.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-temporary-license-type.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-retrieve-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-invalid-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.https.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/resources/drm-retrieve-destroy-persistent-license.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/resources/clearkey-retrieve-destroy-persistent-license.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/resources/drm-retrieve-persistent-license.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/resources/clearkey-retrieve-persistent-license.html
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-persistent-license-events.js
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-destroy-persistent-license.js
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/temporary-license-type.js
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-persistent-license.js
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/invalid-license.js
+#   gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-retrieve-persistent-license.js
+#   gecko-dev/testing/web-platform/tests/webgpu/LICENSE.txt
+#   gecko-dev/testing/web-platform/tests/tools/html5lib/html5lib/tests/testdata/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/funcsigs/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/attrs/docs/license.rst
+#   gecko-dev/testing/web-platform/tests/tools/third_party/pytest/doc/en/license.rst
+#   gecko-dev/testing/web-platform/tests/tools/third_party/pytest/doc/en/_themes/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/enum/enum/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/more-itertools/docs/license.rst
+#   gecko-dev/testing/web-platform/tests/tools/third_party/pywebsocket3/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/certifi/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/hyper/hyper/packages/rfc3986/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/html5lib/doc/license.rst
+#   gecko-dev/testing/web-platform/tests/tools/third_party/aioquic/LICENSE
+#   gecko-dev/testing/web-platform/tests/tools/third_party/aioquic/docs/license.rst
+#   gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-W3CD
+#   gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-W3CTS
+#   gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-BSD
+#   gecko-dev/testing/web-platform/tests/css/css-color/LICENSE
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-004.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-031.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-003.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-003.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-001-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-007-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-032.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-018.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-025.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-020.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-017.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-011.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-030-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-032-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-015.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-005.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-004-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-013-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-001.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-007.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-033-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-027-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-024.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-004-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-029-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-004.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-019.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-006.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-014.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-013.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-001-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-003-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-030.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-021-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-014-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-002-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-008.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-023.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-007-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-003-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-005-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-022-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-019-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-016-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-006-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-011-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-006-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-001.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-008-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-009-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-002-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-025-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-012-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-008-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-029.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-010.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-022.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-031-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-027.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-007.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-021.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-009-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-020-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-015-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-010.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-023-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-024-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-026-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-010-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-028.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-028-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-017-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-005.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-016.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-005-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-033.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-002.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-002.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-009.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-026.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-009.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-018-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-006.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-012.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-008.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-010-ref.xht
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-025.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-013.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-026.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-009.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-032.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-007.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-027.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-024.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-005.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-001.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-023.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-016.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-005.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-004.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-029.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-002.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-012.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-010.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-009.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-031.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-003.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-028.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-002.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-011.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-008.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-017.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-014.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-019.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-015.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-020.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-008.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-030.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-001.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-022.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-010.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-003.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-021.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-004.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-007.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-033.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-006.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-006.woff2
+#   gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-018.woff2
+#   gecko-dev/testing/web-platform/tests/css/css-ui/support/PTS/PngSuite.LICENSE
+#   gecko-dev/testing/web-platform/tests/html/canvas/tools/LICENSE.txt
+#   gecko-dev/testing/web-platform/tests/fonts/noto/NotoSansAdlam-hinted/LICENSE_OFL.txt
+#   gecko-dev/testing/web-platform/tests/fonts/noto/NotoSansCypriot-hinted/LICENSE_OFL.txt
+#   gecko-dev/testing/web-platform/tests/fonts/adobe-fonts/LICENSE
+#   gecko-dev/testing/web-platform/tests/fonts/CSSTest/LICENSE
+#   gecko-dev/testing/mozharness/LICENSE
+#   gecko-dev/testing/talos/talos/tests/dromaeo/LICENSE
+#   gecko-dev/testing/mochitest/MochiKit/LICENSE.txt
+#   gecko-dev/testing/mochitest/tests/MochiKit-1.4.2/LICENSE.txt
+#   gecko-dev/testing/mochitest/pywebsocket/COPYING
+#   gecko-dev/testing/mozbase/mozproxy/mozproxy/backends/mitm/scripts/catapult/LICENSE
+#   gecko-dev/testing/gtest/gtest/LICENSE
+#   gecko-dev/testing/gtest/gmock/LICENSE
+#   gecko-dev/build/pgo/blueprint/LICENSE
+#   gecko-dev/editor/libeditor/tests/browserscope/lib/richtext2/LICENSE
+#   gecko-dev/editor/libeditor/tests/browserscope/lib/richtext/LICENSE
+#   gecko-dev/third_party/python/funcsigs/LICENSE
+#   gecko-dev/third_party/python/attrs/docs/license.rst
+#   gecko-dev/third_party/python/requests-unixsocket/LICENSE
+#   gecko-dev/third_party/python/voluptuous/COPYING
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/piptools/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/pipfile/LICENSE.APACHE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/pipfile/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/retrying.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/distro.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/appdirs.LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/ipaddress.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/packaging/LICENSE.APACHE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/packaging/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/progress/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/webencodings/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/cachecontrol/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/urllib3/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/distlib/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/colorama/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/requests/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/certifi/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/lockfile/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/idna/LICENSE.rst
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/appdirs.LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/semver.LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/jinja2/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pipreqs/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pexpect/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/retrying.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/distro.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/appdirs.LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/ipaddress.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/packaging/LICENSE.APACHE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/packaging/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/progress/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/webencodings/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/cachecontrol/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/urllib3/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/distlib/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/colorama/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/requests/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/certifi/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/lockfile/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/idna/LICENSE.rst
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/yarg/LICENSE-REQUESTS
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/urllib3/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/click/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/markupsafe/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/colorama/LICENSE.txt
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/requirements/LICENSE.rst
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/dotenv/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/backports/weakref.LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/ptyprocess/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/requests/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/pytoml/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/certifi/LICENSE
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/idna/LICENSE.rst
+#   gecko-dev/third_party/python/pipenv/pipenv/vendor/shutilwhich/LICENSE
+#   gecko-dev/third_party/python/mozilla-version/LICENSE
+#   gecko-dev/third_party/python/pytest/doc/en/license.rst
+#   gecko-dev/third_party/python/pytest/doc/en/_themes/LICENSE
+#   gecko-dev/third_party/python/pip-tools/LICENSE
+#   gecko-dev/third_party/python/scandir/LICENSE.txt
+#   gecko-dev/third_party/python/ecdsa/LICENSE
+#   gecko-dev/third_party/python/distro/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/scandir-1.10.0-cp38-cp38-macosx_10_15_x86_64/scandir-1.10.0.dist-info/LICENSE.txt
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/filelock-3.0.12-py3-none-any/filelock-3.0.12.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/typing-3.7.4.3-py2-none-any/typing-3.7.4.3.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_metadata-1.1.3-py2.py3-none-any/importlib_metadata-1.1.3.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/typing-3.7.4.1-py3-none-any/typing-3.7.4.1.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_resources-1.0.2-py2.py3-none-any/importlib_resources-1.0.2.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_metadata-1.7.0-py2.py3-none-any/importlib_metadata-1.7.0.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_resources-3.0.0-py2.py3-none-any/importlib_resources-3.0.0.dist-info/LICENSE
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/appdirs-1.4.4-py2.py3-none-any/appdirs-1.4.4.dist-info/LICENSE.txt
+#   gecko-dev/third_party/python/virtualenv/__virtualenv__/contextlib2-0.6.0.post1-py2.py3-none-any/contextlib2-0.6.0.post1.dist-info/LICENSE.txt
+#   gecko-dev/third_party/python/pyasn1/LICENSE.rst
+#   gecko-dev/third_party/python/pyasn1/docs/source/license.rst
+#   gecko-dev/third_party/python/pyasn1-modules/LICENSE.txt
+#   gecko-dev/third_party/python/taskcluster-urls/LICENSE
+#   gecko-dev/third_party/python/importlib_metadata/LICENSE
+#   gecko-dev/third_party/python/compare-locales/compare_locales/tests/data/triple-license.dtd
+#   gecko-dev/third_party/python/diskcache/LICENSE
+#   gecko-dev/third_party/python/psutil-cp27-none-win_amd64/psutil-5.7.0.dist-info/LICENSE
+#   gecko-dev/third_party/python/more-itertools/docs/license.rst
+#   gecko-dev/third_party/python/rsa/LICENSE
+#   gecko-dev/third_party/python/psutil/LICENSE
+#   gecko-dev/third_party/python/virtualenv-clone/LICENSE
+#   gecko-dev/third_party/python/Click/LICENSE.rst
+#   gecko-dev/third_party/python/Click/docs/license.rst
+#   gecko-dev/third_party/python/requests/LICENSE
+#   gecko-dev/third_party/python/Jinja2/LICENSE.rst
+#   gecko-dev/third_party/python/mock-1.0.0/LICENSE.txt
+#   gecko-dev/third_party/python/gyp/LICENSE
+#   gecko-dev/third_party/python/appdirs/LICENSE.txt
+#   gecko-dev/third_party/python/coverage/LICENSE.txt
+#   gecko-dev/third_party/python/certifi/LICENSE
+#   gecko-dev/third_party/python/sentry-sdk/LICENSE
+#   gecko-dev/third_party/python/cbor2/LICENSE.txt
+#   gecko-dev/third_party/python/enum34/enum/LICENSE
+#   gecko-dev/third_party/python/glean_parser/LICENSE
+#   gecko-dev/third_party/python/futures/LICENSE
+#   gecko-dev/third_party/python/MarkupSafe/LICENSE.rst
+#   gecko-dev/third_party/python/MarkupSafe/docs/license.rst
+#   gecko-dev/third_party/python/responses/LICENSE
+#   gecko-dev/third_party/dav1d/COPYING
+#   gecko-dev/third_party/rust/fake-simd/LICENSE-APACHE
+#   gecko-dev/third_party/rust/adler32/LICENSE
+#   gecko-dev/third_party/rust/foreign-types/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-bigint/LICENSE-APACHE
+#   gecko-dev/third_party/rust/plain/LICENSE-APACHE
+#   gecko-dev/third_party/rust/quick-error/LICENSE-APACHE
+#   gecko-dev/third_party/rust/wasmparser-0.48.2/LICENSE
+#   gecko-dev/third_party/rust/fuchsia-cprng/LICENSE
+#   gecko-dev/third_party/rust/mio-named-pipes/LICENSE-APACHE
+#   gecko-dev/third_party/rust/crossbeam-utils-0.6.5/LICENSE-APACHE
+#   gecko-dev/third_party/rust/serde_repr/LICENSE-APACHE
+#   gecko-dev/third_party/rust/linked-hash-map/LICENSE-APACHE
+#   gecko-dev/third_party/rust/winapi-x86_64-pc-windows-gnu/lib/libwinapi_oemlicense.a
+#   gecko-dev/third_party/rust/rand_hc/COPYRIGHT
+#   gecko-dev/third_party/rust/rand_hc/LICENSE-APACHE
+#   gecko-dev/third_party/rust/wasmparser/LICENSE
+#   gecko-dev/third_party/rust/safemem/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cose-c/LICENSE
+#   gecko-dev/third_party/rust/crossbeam-epoch/LICENSE-APACHE
+#   gecko-dev/third_party/rust/serde/LICENSE-APACHE
+#   gecko-dev/third_party/rust/stable_deref_trait/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rayon/LICENSE-APACHE
+#   gecko-dev/third_party/rust/glob/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicode-bidi/COPYRIGHT
+#   gecko-dev/third_party/rust/unicode-bidi/LICENSE-APACHE
+#   gecko-dev/third_party/rust/same-file/COPYING
+#   gecko-dev/third_party/rust/ringbuf/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cookie/LICENSE-APACHE
+#   gecko-dev/third_party/rust/tempfile/LICENSE-APACHE
+#   gecko-dev/third_party/rust/authenticator/LICENSE
+#   gecko-dev/third_party/rust/peek-poke-derive/LICENSE-MIT
+#   gecko-dev/third_party/rust/peek-poke-derive/LICENSE-APACHE
+#   gecko-dev/third_party/rust/thiserror/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cranelift-codegen-shared/LICENSE
+#   gecko-dev/third_party/rust/id-arena/LICENSE-APACHE
+#   gecko-dev/third_party/rust/moz_cbor/LICENSE
+#   gecko-dev/third_party/rust/malloc_size_of_derive/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures-cpupool/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-iter/LICENSE-APACHE
+#   gecko-dev/third_party/rust/chrono/LICENSE.txt
+#   gecko-dev/third_party/rust/thread_local/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rustc-demangle/LICENSE-APACHE
+#   gecko-dev/third_party/rust/serde_urlencoded/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures-task/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rust_cascade/license.txt
+#   gecko-dev/third_party/rust/serde_yaml/LICENSE-APACHE
+#   gecko-dev/third_party/rust/dns-parser/LICENSE-APACHE
+#   gecko-dev/third_party/rust/itertools/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cubeb-coreaudio/LICENSE
+#   gecko-dev/third_party/rust/cranelift-bforest/LICENSE
+#   gecko-dev/third_party/rust/wat/LICENSE
+#   gecko-dev/third_party/rust/crossbeam-deque/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rand_chacha/COPYRIGHT
+#   gecko-dev/third_party/rust/rand_chacha/LICENSE-APACHE
+#   gecko-dev/third_party/rust/memmap/LICENSE-APACHE
+#   gecko-dev/third_party/rust/hawk/LICENSE
+#   gecko-dev/third_party/rust/toml/LICENSE-APACHE
+#   gecko-dev/third_party/rust/atom/LICENSE
+#   gecko-dev/third_party/rust/dtoa/LICENSE-APACHE
+#   gecko-dev/third_party/rust/libc/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ahash/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lock_api/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-rational/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cubeb-core/LICENSE
+#   gecko-dev/third_party/rust/autocfg-0.1.6/LICENSE-APACHE
+#   gecko-dev/third_party/rust/serde_bytes/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-integer/LICENSE-APACHE
+#   gecko-dev/third_party/rust/encoding_c/COPYRIGHT
+#   gecko-dev/third_party/rust/webrtc-sdp/LICENSE
+#   gecko-dev/third_party/rust/gleam/COPYING
+#   gecko-dev/third_party/rust/gleam/LICENSE-APACHE
+#   gecko-dev/third_party/rust/term_size/LICENSE-APACHE
+#   gecko-dev/third_party/rust/getrandom/LICENSE-APACHE
+#   gecko-dev/third_party/rust/base64-0.10.1/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ron/LICENSE-APACHE
+#   gecko-dev/third_party/rust/plane-split/LICENSE
+#   gecko-dev/third_party/rust/scoped-tls/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures-0.1.29/LICENSE-APACHE
+#   gecko-dev/third_party/rust/jsparagus/LICENSE
+#   gecko-dev/third_party/rust/jsparagus/LICENSE-APACHE-2.0
+#   gecko-dev/third_party/rust/hashbrown/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cranelift-frontend/LICENSE
+#   gecko-dev/third_party/rust/either/LICENSE-APACHE
+#   gecko-dev/third_party/rust/comedy/LICENSE-APACHE
+#   gecko-dev/third_party/rust/runloop/LICENSE
+#   gecko-dev/third_party/rust/copyless/LICENSE
+#   gecko-dev/third_party/rust/dbus/LICENSE-APACHE
+#   gecko-dev/third_party/rust/digest/LICENSE-APACHE
+#   gecko-dev/third_party/rust/libdbus-sys/LICENSE-APACHE
+#   gecko-dev/third_party/rust/fuchsia-zircon/LICENSE
+#   gecko-dev/third_party/rust/percent-encoding/LICENSE-APACHE
+#   gecko-dev/third_party/rust/clang-sys/LICENSE.txt
+#   gecko-dev/third_party/rust/proc-macro2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/serde_derive/LICENSE-APACHE
+#   gecko-dev/third_party/rust/winapi-i686-pc-windows-gnu/lib/libwinapi_oemlicense.a
+#   gecko-dev/third_party/rust/cose/LICENSE
+#   gecko-dev/third_party/rust/hibitset/LICENSE-APACHE
+#   gecko-dev/third_party/rust/proc-macro-hack/LICENSE-APACHE
+#   gecko-dev/third_party/rust/bytemuck/LICENSE-ZLIB.md
+#   gecko-dev/third_party/rust/hex/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cranelift-codegen/LICENSE
+#   gecko-dev/third_party/rust/peeking_take_while/LICENSE-APACHE
+#   gecko-dev/third_party/rust/jobserver/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-traits/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ryu/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ryu/LICENSE-BOOST
+#   gecko-dev/third_party/rust/regalloc/LICENSE
+#   gecko-dev/third_party/rust/crossbeam-queue/LICENSE-THIRD-PARTY
+#   gecko-dev/third_party/rust/crossbeam-queue/LICENSE-APACHE
+#   gecko-dev/third_party/rust/msdos_time/LICENSE-APACHE
+#   gecko-dev/third_party/rust/hermit-abi/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures-util/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cast/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cranelift-entity-0.41.0/LICENSE
+#   gecko-dev/third_party/rust/cranelift-codegen-meta/LICENSE
+#   gecko-dev/third_party/rust/cranelift-codegen-meta/src/isa/x86/legalize.rs
+#   gecko-dev/third_party/rust/cranelift-codegen-meta/src/shared/legalize.rs
+#   gecko-dev/third_party/rust/bumpalo/LICENSE-APACHE
+#   gecko-dev/third_party/rust/byte-tools/LICENSE-APACHE
+#   gecko-dev/third_party/rust/vec_map/LICENSE-APACHE
+#   gecko-dev/third_party/rust/storage-map/LICENSE
+#   gecko-dev/third_party/rust/uuid/COPYRIGHT
+#   gecko-dev/third_party/rust/uuid/LICENSE-APACHE
+#   gecko-dev/third_party/rust/mio-extras/LICENSE-APACHE
+#   gecko-dev/third_party/rust/podio/LICENSE-APACHE
+#   gecko-dev/third_party/rust/wio/LICENSE-APACHE
+#   gecko-dev/third_party/rust/quote/LICENSE-APACHE
+#   gecko-dev/third_party/rust/mapped_hyph/COPYRIGHT
+#   gecko-dev/third_party/rust/error-chain/LICENSE-APACHE
+#   gecko-dev/third_party/rust/binary-space-partition/LICENSE
+#   gecko-dev/third_party/rust/target-lexicon/LICENSE
+#   gecko-dev/third_party/rust/serde_json/LICENSE-APACHE
+#   gecko-dev/third_party/rust/block-buffer/LICENSE-APACHE
+#   gecko-dev/third_party/rust/paste/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ffi-support/LICENSE-APACHE
+#   gecko-dev/third_party/rust/memchr/COPYING
+#   gecko-dev/third_party/rust/mio-uds/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cc/LICENSE-APACHE
+#   gecko-dev/third_party/rust/core-graphics/COPYRIGHT
+#   gecko-dev/third_party/rust/core-graphics/LICENSE-APACHE
+#   gecko-dev/third_party/rust/leb128/LICENSE-APACHE
+#   gecko-dev/third_party/rust/core-foundation-sys/LICENSE-APACHE
+#   gecko-dev/third_party/rust/dogear/LICENSE
+#   gecko-dev/third_party/rust/base64/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cmake/LICENSE-APACHE
+#   gecko-dev/third_party/rust/glsl/LICENSE
+#   gecko-dev/third_party/rust/tinystr/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rustc_version/LICENSE-APACHE
+#   gecko-dev/third_party/rust/autocfg/LICENSE-APACHE
+#   gecko-dev/third_party/rust/dirs/LICENSE-APACHE
+#   gecko-dev/third_party/rust/termcolor/COPYING
+#   gecko-dev/third_party/rust/futures-io/LICENSE-APACHE
+#   gecko-dev/third_party/rust/httparse/LICENSE-APACHE
+#   gecko-dev/third_party/rust/itoa/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lmdb-rkv-sys/lmdb/libraries/liblmdb/COPYRIGHT
+#   gecko-dev/third_party/rust/lmdb-rkv-sys/lmdb/libraries/liblmdb/LICENSE
+#   gecko-dev/third_party/rust/cexpr/LICENSE-MIT
+#   gecko-dev/third_party/rust/cexpr/LICENSE-APACHE
+#   gecko-dev/third_party/rust/core-text/COPYRIGHT
+#   gecko-dev/third_party/rust/core-text/LICENSE-APACHE
+#   gecko-dev/third_party/rust/yaml-rust/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ppv-lite86/LICENSE-APACHE
+#   gecko-dev/third_party/rust/pin-utils/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cocoa/COPYRIGHT
+#   gecko-dev/third_party/rust/cocoa/LICENSE-APACHE
+#   gecko-dev/third_party/rust/chardetng_c/COPYRIGHT
+#   gecko-dev/third_party/rust/rand/COPYRIGHT
+#   gecko-dev/third_party/rust/rand/LICENSE-APACHE
+#   gecko-dev/third_party/rust/smallbitvec/LICENSE-APACHE
+#   gecko-dev/third_party/rust/fallible-streaming-iterator/LICENSE-APACHE
+#   gecko-dev/third_party/rust/shift_or_euc_c/COPYRIGHT
+#   gecko-dev/third_party/rust/time/LICENSE-APACHE
+#   gecko-dev/third_party/rust/http/LICENSE-APACHE
+#   gecko-dev/third_party/rust/base16/LICENSE-CC0
+#   gecko-dev/third_party/rust/rust-argon2/LICENSE-MIT
+#   gecko-dev/third_party/rust/rust-argon2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/siphasher/COPYING
+#   gecko-dev/third_party/rust/miow/LICENSE-APACHE
+#   gecko-dev/third_party/rust/winapi/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lucet-wasi/LICENSE.cloudabi-utils
+#   gecko-dev/third_party/rust/lucet-wasi/LICENSE
+#   gecko-dev/third_party/rust/lucet-wasi/LICENSE.wasmtime
+#   gecko-dev/third_party/rust/futures-sink/LICENSE-APACHE
+#   gecko-dev/third_party/rust/peek-poke/LICENSE-MIT
+#   gecko-dev/third_party/rust/peek-poke/LICENSE-APACHE
+#   gecko-dev/third_party/rust/parking_lot_core/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rand_pcg/COPYRIGHT
+#   gecko-dev/third_party/rust/rand_pcg/LICENSE-APACHE
+#   gecko-dev/third_party/rust/target-lexicon-0.9.0/LICENSE
+#   gecko-dev/third_party/rust/semver-parser/LICENSE-APACHE
+#   gecko-dev/third_party/rust/bindgen/LICENSE
+#   gecko-dev/third_party/rust/lazycell/LICENSE-MIT
+#   gecko-dev/third_party/rust/lazycell/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rental/LICENSE-APACHE
+#   gecko-dev/third_party/rust/socket2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/iovec/LICENSE-APACHE
+#   gecko-dev/third_party/rust/core-foundation/LICENSE-APACHE
+#   gecko-dev/third_party/rust/paste-impl/LICENSE-APACHE
+#   gecko-dev/third_party/rust/png/LICENSE-APACHE
+#   gecko-dev/third_party/rust/filetime_win/LICENSE-APACHE
+#   gecko-dev/third_party/rust/url/LICENSE-APACHE
+#   gecko-dev/third_party/rust/pkg-config/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lru-cache/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cubeb-backend/LICENSE
+#   gecko-dev/third_party/rust/libz-sys/LICENSE-APACHE
+#   gecko-dev/third_party/rust/libz-sys/src/zlib/contrib/dotzlib/LICENSE_1_0.txt
+#   gecko-dev/third_party/rust/bitflags/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num-derive/LICENSE-APACHE
+#   gecko-dev/third_party/rust/sha2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/threadbound/LICENSE-APACHE
+#   gecko-dev/third_party/rust/semver/LICENSE-APACHE
+#   gecko-dev/third_party/rust/freetype/COPYRIGHT
+#   gecko-dev/third_party/rust/freetype/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicode-width/COPYRIGHT
+#   gecko-dev/third_party/rust/unicode-width/LICENSE-APACHE
+#   gecko-dev/third_party/rust/smallvec/LICENSE-APACHE
+#   gecko-dev/third_party/rust/crossbeam-utils/LICENSE-APACHE
+#   gecko-dev/third_party/rust/packed_simd/LICENSE-APACHE
+#   gecko-dev/third_party/rust/block-padding/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lmdb-rkv/LICENSE
+#   gecko-dev/third_party/rust/futures-core/LICENSE-APACHE
+#   gecko-dev/third_party/rust/anyhow/LICENSE-APACHE
+#   gecko-dev/third_party/rust/log/LICENSE-APACHE
+#   gecko-dev/third_party/rust/c2-chacha/LICENSE-APACHE
+#   gecko-dev/third_party/rust/guid_win/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures-channel/LICENSE-APACHE
+#   gecko-dev/third_party/rust/opaque-debug/LICENSE-APACHE
+#   gecko-dev/third_party/rust/dirs-sys/LICENSE-APACHE
+#   gecko-dev/third_party/rust/parking_lot/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicode-normalization/COPYRIGHT
+#   gecko-dev/third_party/rust/unicode-normalization/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cranelift-wasm/LICENSE
+#   gecko-dev/third_party/rust/wincolor/COPYING
+#   gecko-dev/third_party/rust/cranelift-entity/LICENSE
+#   gecko-dev/third_party/rust/uluru/LICENSE
+#   gecko-dev/third_party/rust/fnv/LICENSE-APACHE
+#   gecko-dev/third_party/rust/arrayvec/LICENSE-APACHE
+#   gecko-dev/third_party/rust/byteorder/COPYING
+#   gecko-dev/third_party/rust/lucet-runtime/LICENSE
+#   gecko-dev/third_party/rust/cubeb/LICENSE
+#   gecko-dev/third_party/rust/encoding_c_mem/COPYRIGHT
+#   gecko-dev/third_party/rust/encoding_rs/COPYRIGHT
+#   gecko-dev/third_party/rust/euclid/COPYRIGHT
+#   gecko-dev/third_party/rust/euclid/LICENSE-APACHE
+#   gecko-dev/third_party/rust/miow-0.2.1/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cubeb-pulse/LICENSE
+#   gecko-dev/third_party/rust/prost/LICENSE
+#   gecko-dev/third_party/rust/parity-wasm/LICENSE-APACHE
+#   gecko-dev/third_party/rust/fallible-iterator/LICENSE-APACHE
+#   gecko-dev/third_party/rust/fluent-langneg/LICENSE
+#   gecko-dev/third_party/rust/winapi-util/COPYING
+#   gecko-dev/third_party/rust/rand_core/COPYRIGHT
+#   gecko-dev/third_party/rust/rand_core/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rustc-hash/LICENSE-APACHE
+#   gecko-dev/third_party/rust/lazy_static/LICENSE-APACHE
+#   gecko-dev/third_party/rust/shift_or_euc/COPYRIGHT
+#   gecko-dev/third_party/rust/version_check/LICENSE-APACHE
+#   gecko-dev/third_party/rust/indexmap/LICENSE-APACHE
+#   gecko-dev/third_party/rust/regex/LICENSE-APACHE
+#   gecko-dev/third_party/rust/regex/src/testdata/LICENSE
+#   gecko-dev/third_party/rust/regex-syntax/LICENSE-APACHE
+#   gecko-dev/third_party/rust/regex-syntax/src/unicode_tables/LICENSE-UNICODE
+#   gecko-dev/third_party/rust/once_cell/LICENSE-APACHE
+#   gecko-dev/third_party/rust/remove_dir_all/LICENCE-APACHE
+#   gecko-dev/third_party/rust/metal/LICENSE-APACHE
+#   gecko-dev/third_party/rust/crc32fast/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cfg-if/LICENSE-APACHE
+#   gecko-dev/third_party/rust/object/LICENSE-APACHE
+#   gecko-dev/third_party/rust/flate2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/env_logger/LICENSE-APACHE
+#   gecko-dev/third_party/rust/sha-1/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicase/LICENSE-APACHE
+#   gecko-dev/third_party/rust/num_cpus/LICENSE-APACHE
+#   gecko-dev/third_party/rust/ece/LICENSE
+#   gecko-dev/third_party/rust/glean-core/LICENSE
+#   gecko-dev/third_party/rust/humantime/LICENSE-MIT
+#   gecko-dev/third_party/rust/humantime/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicode-segmentation/COPYRIGHT
+#   gecko-dev/third_party/rust/unicode-segmentation/LICENSE-APACHE
+#   gecko-dev/third_party/rust/walkdir/COPYING
+#   gecko-dev/third_party/rust/wast/LICENSE-APACHE
+#   gecko-dev/third_party/rust/glslopt/glsl-optimizer/license.txt
+#   gecko-dev/third_party/rust/deflate/LICENSE-APACHE
+#   gecko-dev/third_party/rust/idna/LICENSE-APACHE
+#   gecko-dev/third_party/rust/failure/LICENSE-APACHE
+#   gecko-dev/third_party/rust/futures/LICENSE-APACHE
+#   gecko-dev/third_party/rust/rayon-core/LICENSE-APACHE
+#   gecko-dev/third_party/rust/net2/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unicode-xid/COPYRIGHT
+#   gecko-dev/third_party/rust/unicode-xid/LICENSE-APACHE
+#   gecko-dev/third_party/rust/unreachable/LICENSE-APACHE
+#   gecko-dev/third_party/rust/syn/LICENSE-APACHE
+#   gecko-dev/third_party/rust/aho-corasick/COPYING
+#   gecko-dev/third_party/rust/atomic/LICENSE-APACHE
+#   gecko-dev/third_party/rust/tracy-rs/LICENSE
+#   gecko-dev/third_party/rust/mime/LICENSE-APACHE
+#   gecko-dev/third_party/rust/scopeguard/LICENSE-APACHE
+#   gecko-dev/third_party/rust/cubeb-sys/LICENSE
+#   gecko-dev/third_party/rust/cubeb-sys/libcubeb/LICENSE
+#   gecko-dev/third_party/rust/cubeb-sys/libcubeb/cmake/sanitizers-cmake/LICENSE
+#   gecko-dev/third_party/rust/cubeb-sys/libcubeb/googletest/COPYING
+#   gecko-dev/third_party/rust/chardetng/COPYRIGHT
+#   gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/license.md
+#   gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/license.md
+#   gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/react/LICENSE
+#   gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/react-dom/LICENSE
+#   gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/dependency-examples/flight/flight/node_modules/requirejs-text/LICENSE
+#   gecko-dev/third_party/aom/LICENSE
+#   gecko-dev/third_party/aom/third_party/fastfeat/LICENSE
+#   gecko-dev/third_party/aom/third_party/libwebm/LICENSE.TXT
+#   gecko-dev/third_party/aom/third_party/googletest/src/googletest/LICENSE
+#   gecko-dev/third_party/aom/third_party/x86inc/LICENSE
+#   gecko-dev/intl/locales/lt/hyphenation/LICENSE
+#   gecko-dev/intl/locales/et/hyphenation/LICENSE
+#   gecko-dev/intl/locales/ru/hyphenation/LICENSE
+#   gecko-dev/intl/locales/is/hyphenation/LICENSE
+#   gecko-dev/intl/locales/hu/hyphenation/LICENSE
+#   gecko-dev/intl/locales/ia/hyphenation/LICENSE
+#   gecko-dev/intl/locales/pt/hyphenation/LICENSE
+#   gecko-dev/intl/locales/hr/hyphenation/LICENSE
+#   gecko-dev/intl/locales/nn/hyphenation/LICENSE
+#   gecko-dev/intl/locales/sh/hyphenation/LICENSE
+#   gecko-dev/intl/locales/de-CH/hyphenation/LICENSE
+#   gecko-dev/intl/locales/ca/hyphenation/LICENSE
+#   gecko-dev/intl/locales/de-1901/hyphenation/LICENSE
+#   gecko-dev/intl/locales/sl/hyphenation/LICENSE
+#   gecko-dev/intl/locales/mn/hyphenation/LICENSE
+#   gecko-dev/intl/locales/hsb/hyphenation/LICENSE
+#   gecko-dev/intl/locales/uk/hyphenation/LICENSE
+#   gecko-dev/intl/locales/kmr/hyphenation/LICENSE
+#   gecko-dev/intl/locales/de-1996/hyphenation/LICENSE
+#   gecko-dev/intl/locales/cy/hyphenation/LICENSE
+#   gecko-dev/intl/locales/nb/hyphenation/LICENSE
+#   gecko-dev/intl/locales/fr/hyphenation/LICENSE
+#   gecko-dev/intl/locales/es/hyphenation/LICENSE
+#   gecko-dev/intl/locales/eo/hyphenation/LICENSE
+#   gecko-dev/intl/locales/gl/hyphenation/LICENSE
+#   gecko-dev/intl/locales/fi/hyphenation/LICENSE
+#   gecko-dev/intl/locales/tr/hyphenation/LICENSE
+#   gecko-dev/intl/locales/sv/hyphenation/LICENSE
+#   gecko-dev/intl/locales/bg/hyphenation/LICENSE
+#   gecko-dev/intl/locales/pl/hyphenation/LICENSE
+#   gecko-dev/intl/locales/la/hyphenation/LICENSE
+#   gecko-dev/intl/locales/af/hyphenation/LICENSE
+#   gecko-dev/intl/locales/nl/hyphenation/LICENSE
+#   gecko-dev/intl/locales/it/hyphenation/LICENSE
+#   gecko-dev/intl/locales/da/hyphenation/LICENSE
+#   gecko-dev/other-licenses/bsdiff/LICENSE
+#   gecko-dev/other-licenses/nsis/Contrib/liteFirewall/License.txt
+#   gecko-dev/other-licenses/snappy/src/COPYING
+#
+# NOTE: multiple licenses have been detected; they have been separated with &
+# in the LICENSE value for now since it is a reasonable assumption that all
+# of the licenses apply. If instead there is a choice between the multiple
+# licenses then you should change the value to separate the licenses with |
+# instead of &. If there is any doubt, check the accompanying documentation
+# to determine which situation is applicable.
+LICENSE = "Unknown & MPL-2.0 & MPL-1.1 & LGPLv2.1 & MIT & Apache-2.0 & GPLv2 & LGPLv3 & BSD-2-Clause & GPLv3 & Unlicense & ISC"
+LIC_FILES_CHKSUM = "file://gecko-dev/LICENSE;md5=dc9b6ecd19a14a54a628edaaf23733bf \
+                    file://gecko-dev/LEGAL;md5=b8da4acd28bf994d70e4c5790d599f1a \
+                    file://gecko-dev/extensions/spellcheck/hunspell/src/license.hunspell;md5=99752f09307b59ffce8837199f9bf281 \
+                    file://gecko-dev/extensions/spellcheck/hunspell/src/license.myspell;md5=144d202f24e14f38b722f11f45135c91 \
+                    file://gecko-dev/mobile/android/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/mobile/android/geckoview/src/thirdparty/java/org/mozilla/thirdparty/com/google/android/exoplayer2/drm/OfflineLicenseHelper.java;md5=1756b3c2b5bfa9d7c39653bbcdb424e0 \
+                    file://gecko-dev/gfx/ycbcr/LICENSE;md5=3947f60c9d4b1ba51d193af511855a55 \
+                    file://gecko-dev/gfx/cairo/cairo/COPYING-MPL-1.1;md5=bfe1f75d606912a4111c90743d6c7325 \
+                    file://gecko-dev/gfx/cairo/cairo/COPYING;md5=14527358ab1f97bce3621183be23dc38 \
+                    file://gecko-dev/gfx/cairo/cairo/COPYING-LGPL-2.1;md5=fad9b3332be894bab9bc501572864b29 \
+                    file://gecko-dev/gfx/cairo/libpixman/COPYING;md5=d41d8cd98f00b204e9800998ecf8427e \
+                    file://gecko-dev/gfx/harfbuzz/COPYING;md5=8f787620b7d3866d9552fd1924c07572 \
+                    file://gecko-dev/gfx/harfbuzz/src/ms-use/COPYING;md5=d4a904ca135bb7bc912156fee12726f0 \
+                    file://gecko-dev/gfx/vr/service/openvr/LICENSE;md5=3f0ba432004f9cf11d8186503a8bd3d7 \
+                    file://gecko-dev/gfx/wgpu/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/gfx/wr/LICENSE;md5=9f24060968214d06e48b1dfe2d6f055a \
+                    file://gecko-dev/gfx/wr/wr_malloc_size_of/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/gfx/wr/wr_malloc_size_of/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/gfx/wr/peek-poke/LICENSE-MIT;md5=a3a122bd021649feab1523e3e300f102 \
+                    file://gecko-dev/gfx/wr/peek-poke/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/gfx/wr/peek-poke/peek-poke-derive/LICENSE-MIT;md5=a3a122bd021649feab1523e3e300f102 \
+                    file://gecko-dev/gfx/wr/peek-poke/peek-poke-derive/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/gfx/wr/wrench/reftests/text/Proggy-License.txt;md5=b1ce03bd52d45fc376c1c6d8a9247ef5 \
+                    file://gecko-dev/gfx/skia/LICENSE;md5=6d92052713ad858275aa4accfa5acdb7 \
+                    file://gecko-dev/gfx/skia/skia/include/third_party/vulkan/LICENSE;md5=c37f94a6c8957870f13f5dd9b7e9f54f \
+                    file://gecko-dev/gfx/skia/skia/include/third_party/skcms/LICENSE;md5=c37f94a6c8957870f13f5dd9b7e9f54f \
+                    file://gecko-dev/gfx/skia/skia/third_party/skcms/LICENSE;md5=c37f94a6c8957870f13f5dd9b7e9f54f \
+                    file://gecko-dev/gfx/graphite2/COPYING;md5=b0452d508cc4eb104de0226a5b0c8786 \
+                    file://gecko-dev/gfx/graphite2/LICENSE;md5=2d5025d4aa3495befef8f17206a5b0a1 \
+                    file://gecko-dev/gfx/ots/LICENSE;md5=e06eff2aa65b917034a81599bea73dc4 \
+                    file://gecko-dev/python/mozbuild/mozbuild/test/test_licenses.py;md5=7f551c2c484e5d6667e9fb70c55e1a91 \
+                    file://gecko-dev/layout/reftests/w3c-css/LICENSE;md5=ca99c0ced753b09abcbc15c673c68373 \
+                    file://gecko-dev/layout/reftests/fonts/loadtest-license.txt;md5=13186878f4ef2f40c12130f009ba5056 \
+                    file://gecko-dev/layout/reftests/fonts/Chunkfive-license.txt;md5=6ed93967ff0dc6dd9c8d31c17f817a06 \
+                    file://gecko-dev/layout/reftests/fonts/glyphwiki-license.txt;md5=0450980e2bdb14908c5f32c0a3ceb1d8 \
+                    file://gecko-dev/layout/reftests/fonts/mplus/mplus-license.txt;md5=ac161e96eda00db9a3aec7870b5d9658 \
+                    file://gecko-dev/layout/reftests/fonts/sil/Gentium-license.txt;md5=a8d031218bb5f8aa1f123de733d3e695 \
+                    file://gecko-dev/layout/reftests/fonts/sil/Charis-license.txt;md5=3e35369103a9cb0559fca78db8be30cc \
+                    file://gecko-dev/layout/reftests/fonts/sil/ScheherazadeRegOT-license.txt;md5=ffb7791099032972138fdcf26559595d \
+                    file://gecko-dev/mfbt/lz4/LICENSE;md5=ebc2ea4814a64de7708f1571904b32cc \
+                    file://gecko-dev/mfbt/double-conversion/double-conversion/LICENSE;md5=1ea35644f0ec0d9767897115667e901f \
+                    file://gecko-dev/remote/test/puppeteer/LICENSE;md5=d6e2d6b13ce22361f0b83b01d09ce142 \
+                    file://gecko-dev/remote/test/puppeteer/utils/testserver/LICENSE;md5=d6e2d6b13ce22361f0b83b01d09ce142 \
+                    file://gecko-dev/remote/test/puppeteer/utils/testrunner/LICENSE;md5=d6e2d6b13ce22361f0b83b01d09ce142 \
+                    file://gecko-dev/remote/test/puppeteer/experimental/puppeteer-firefox/LICENSE;md5=d6e2d6b13ce22361f0b83b01d09ce142 \
+                    file://gecko-dev/tools/lint/license.yml;md5=c94690b8f329d27743eab775fd13157a \
+                    file://gecko-dev/tools/lint/test/test_file_license.py;md5=f5f4d00ad47aa4dd28f7b009c90a00de \
+                    file://gecko-dev/tools/lint/license/valid-licenses.txt;md5=b33879b381924f5dbf67fe41d9f3b437 \
+                    file://gecko-dev/tools/lint/eslint/eslint-plugin-mozilla/LICENSE;md5=65d26fcc2f35ea6a181ac777e42db1ea \
+                    file://gecko-dev/tools/lint/eslint/eslint-plugin-spidermonkey-js/LICENSE;md5=65d26fcc2f35ea6a181ac777e42db1ea \
+                    file://gecko-dev/tools/fuzzing/libfuzzer/LICENSE.TXT;md5=b99eb43c934ceebecab85c6b9b1a08be \
+                    file://gecko-dev/tools/crashreporter/system-symbols/win/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/ipc/chromium/src/LICENSE;md5=30032c6c531632af6547fa360395acd3 \
+                    file://gecko-dev/ipc/chromium/src/third_party/libevent/LICENSE;md5=17f20574c0b154d12236d5fbe964f549 \
+                    file://gecko-dev/ipc/chromium/src/third_party/libevent/cmake/Copyright.txt;md5=d21a6002502d8467b3cf1d1e91d3840f \
+                    file://gecko-dev/ipc/chromium/src/third_party/libevent/cmake/COPYING-CMAKE-SCRIPTS;md5=4077a50470e8b2d51f20eed13f5df5c1 \
+                    file://gecko-dev/modules/freetype2/LICENSE.TXT;md5=4af6221506f202774ef74f64932878a1 \
+                    file://gecko-dev/modules/freetype2/docs/LICENSE.TXT;md5=4af6221506f202774ef74f64932878a1 \
+                    file://gecko-dev/modules/freetype2/docs/GPLv2.TXT;md5=8ef380476f642c20ebf40fecb0add2ec \
+                    file://gecko-dev/image/test/reftest/bmp/bmpsuite/COPYING.txt;md5=8f0e2cd40e05189ec81232da84bd6e1a \
+                    file://gecko-dev/nsprpub/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/nsprpub/pkg/solaris/common_files/copyright;md5=e62b2edfdf024610e47ffdc6a6872f19 \
+                    file://gecko-dev/toolkit/mozapps/extensions/content/OpenH264-license.txt;md5=bae0923d301b48b01a37af975118867b \
+                    file://gecko-dev/toolkit/mozapps/update/updater/bspatch/LICENSE;md5=3e837ede9697ce4c789c3ca32aabe003 \
+                    file://gecko-dev/toolkit/modules/third_party/fathom/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/toolkit/components/extensions/schemas/LICENSE;md5=30032c6c531632af6547fa360395acd3 \
+                    file://gecko-dev/toolkit/components/normandy/vendor/LICENSE_THIRDPARTY;md5=c5c69e0fded0c900c9660ff1dfd46fd5 \
+                    file://gecko-dev/toolkit/components/reputationservice/chromium/LICENSE;md5=0fca02217a5d49a14dfe2d11837bb34d \
+                    file://gecko-dev/toolkit/components/jsoncpp/LICENSE;md5=fa2a23dd1dc6c139f35105379d76df2b \
+                    file://gecko-dev/toolkit/components/protobuf/COPYING.txt;md5=af6809583bfde9a31595a58bb4a24514 \
+                    file://gecko-dev/toolkit/themes/LICENSE;md5=b54d56f7f3099eaf614874c1adc6e451 \
+                    file://gecko-dev/toolkit/themes/shared/aboutLicense.css;md5=73507fff852012adf7a7099aa0f812a7 \
+                    file://gecko-dev/toolkit/themes/shared/illustrations/about-license.svg;md5=749bbbf8f0dc8f3ffb29df76ab3a689e \
+                    file://gecko-dev/toolkit/crashreporter/google-breakpad/LICENSE;md5=56c24a43c81c3af6fcf590851931489e \
+                    file://gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/curl/COPYING;md5=be5d9e1419c4363f4b32037a2d3b7ffa \
+                    file://gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/libdisasm/LICENSE;md5=c1c539c20e632f78c24a54f53721c874 \
+                    file://gecko-dev/toolkit/crashreporter/google-breakpad/src/third_party/musl/COPYRIGHT;md5=7928b7ad32ceda04932478e330e52f7f \
+                    file://gecko-dev/toolkit/content/license.html;md5=a4c40e785097c9c1c27c11a65a5b2e48 \
+                    file://gecko-dev/toolkit/content/tests/browser/browser_license_links.js;md5=8e8906959f7de496ec59ef2294506692 \
+                    file://gecko-dev/js/src/zydis/Zydis/LICENSE;md5=b4fd71152f0e238fb1de84f83f9a97cd \
+                    file://gecko-dev/js/src/zydis/Zycore/LICENSE;md5=3fcebff4786249ac2636a5f0be2094b3 \
+                    file://gecko-dev/js/src/ctypes/libffi/LICENSE;md5=3610bb17683a0089ed64055416b2ae1b \
+                    file://gecko-dev/js/src/tests/test262/LICENSE;md5=fe0ae761f2cb8c291a8e2363dbf701d9 \
+                    file://gecko-dev/media/webrtc/trunk/LICENSE;md5=ad296492125bc71530d06234d9bfebe0 \
+                    file://gecko-dev/media/webrtc/trunk/third_party/gflags/LICENSE;md5=c80d1a3b623f72bb85a4c75b556551df \
+                    file://gecko-dev/media/libopus/COPYING;md5=e304cdf74c2a1b0a33a5084c128a23a3 \
+                    file://gecko-dev/media/libtheora/COPYING;md5=cf91718f59eb6a83d06dc7bcaf411132 \
+                    file://gecko-dev/media/libtheora/LICENSE;md5=82ccf023e3ce1aa18043edc61f948e2c \
+                    file://gecko-dev/media/libtremor/COPYING;md5=db1b7a668b2a6f47b2af88fb008ad555 \
+                    file://gecko-dev/media/libwebp/COPYING;md5=6e8dee932c26f2dab503abf70c96d8bb \
+                    file://gecko-dev/media/libyuv/LICENSE;md5=464282cfb405b005b9637f11103a7325 \
+                    file://gecko-dev/media/libyuv/libyuv/LICENSE_THIRD_PARTY;md5=66e9aa6de3f98711c6d12d09f6c31445 \
+                    file://gecko-dev/media/libyuv/libyuv/LICENSE;md5=464282cfb405b005b9637f11103a7325 \
+                    file://gecko-dev/media/libvpx/libvpx/LICENSE;md5=d5b04755015be901744a78cc30d390d4 \
+                    file://gecko-dev/media/libvpx/libvpx/third_party/libyuv/LICENSE;md5=464282cfb405b005b9637f11103a7325 \
+                    file://gecko-dev/media/libvpx/libvpx/third_party/googletest/src/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/media/libvpx/libvpx/third_party/x86inc/LICENSE;md5=6ef596ef35f3e31b07f19b156b83d3a7 \
+                    file://gecko-dev/media/libogg/COPYING;md5=db1b7a668b2a6f47b2af88fb008ad555 \
+                    file://gecko-dev/media/ffvpx/COPYING.LGPLv2.1;md5=bd7a443320af8c812e4c18d1b79df004 \
+                    file://gecko-dev/media/ffvpx/COPYING.LGPLv3;md5=e6a600fd5e1d9cbde2d983680233ad02 \
+                    file://gecko-dev/media/kiss_fft/COPYING;md5=09c3f07cac03ef97ef9ed659a07474af \
+                    file://gecko-dev/media/libjpeg/LICENSE.md;md5=2a423a921d0f68082c80ccc7ad808ef2 \
+                    file://gecko-dev/media/libmkv/LICENSE;md5=d5b04755015be901744a78cc30d390d4 \
+                    file://gecko-dev/media/libspeex_resampler/COPYING;md5=314649d8ba9dd7045dfb6683f298d0a8 \
+                    file://gecko-dev/media/libvorbis/COPYING;md5=70c7063491d2d9f76a098d62ed5134f1 \
+                    file://gecko-dev/media/libcubeb/LICENSE;md5=21251d8e173b07ab6ab56f9cf938d13d \
+                    file://gecko-dev/media/mtransport/third_party/nrappkit/COPYRIGHT;md5=936369803c28702d3b72ade94b492197 \
+                    file://gecko-dev/media/libsoundtouch/LICENSE;md5=4d2892adf339c4489918ab705d44f66c \
+                    file://gecko-dev/media/libnestegg/LICENSE;md5=be7778ed82a56425bc6bef17cc6a52d9 \
+                    file://gecko-dev/media/libpng/LICENSE;md5=b0085051bf265bac2bfc38bc89f50000 \
+                    file://gecko-dev/media/openmax_dl/LICENSE;md5=da3c6f75926b47c3e20e5eff320ba83c \
+                    file://gecko-dev/docs/code-quality/lint/linters/license.rst;md5=9e22e457176f19dedc8569f1f272ef4e \
+                    file://gecko-dev/netwerk/srtp/src/LICENSE;md5=2909fcf6f09ffff8430463d91c08c4e1 \
+                    file://gecko-dev/devtools/shared/acorn/LICENSE;md5=9d09d02f54bd07d93ed3d0bdb1a34311 \
+                    file://gecko-dev/devtools/shared/storage/vendor/JSON5_LICENSE;md5=d80f2808a405d641840b50a06f80e93c \
+                    file://gecko-dev/devtools/shared/qrcode/encoder/LICENSE;md5=b2de21687422ed838115b0b8cefd3747 \
+                    file://gecko-dev/devtools/shared/qrcode/decoder/LICENSE;md5=86d3f3a95c324c9479bd8986968f4327 \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-splitter/LICENSE;md5=f27a50d2e878867827842f2c60e30bfc \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-source-map/LICENSE;md5=f27a50d2e878867827842f2c60e30bfc \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-utils/LICENSE;md5=f27a50d2e878867827842f2c60e30bfc \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-components/LICENSE;md5=f27a50d2e878867827842f2c60e30bfc \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-reps/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/devtools/client/debugger/packages/devtools-wasm-dwarf/LICENSE;md5=f27a50d2e878867827842f2c60e30bfc \
+                    file://gecko-dev/devtools/client/inspector/fonts/test/OstrichLicense.txt;md5=cfbf776a97fef2ccd538910d25170c2d \
+                    file://gecko-dev/devtools/client/shared/sourceeditor/codemirror/LICENSE;md5=989bd6bdc061120e782680e1c4985762 \
+                    file://gecko-dev/devtools/client/shared/vendor/RESELECT_LICENSE;md5=6e457b181d01a0652d6ebfc371e349b1 \
+                    file://gecko-dev/devtools/client/shared/vendor/REDUX_LICENSE;md5=5ebf9048af40820a0944694ca17b8e3a \
+                    file://gecko-dev/devtools/client/shared/vendor/DAGRE_D3_LICENSE;md5=04d7548521ef50aea6ddc72a7f1981f6 \
+                    file://gecko-dev/devtools/client/shared/vendor/REACT_REDUX_LICENSE;md5=5ebf9048af40820a0944694ca17b8e3a \
+                    file://gecko-dev/devtools/client/shared/vendor/REACT_ROUTER_DOM_LICENSE;md5=0af687b5f6be9541550d4848461ae3a1 \
+                    file://gecko-dev/devtools/client/shared/vendor/D3_LICENSE;md5=c8307a7b7a1394f77e887475cf03cd1d \
+                    file://gecko-dev/security/sandbox/chromium/LICENSE;md5=0fca02217a5d49a14dfe2d11837bb34d \
+                    file://gecko-dev/security/sandbox/chromium/base/third_party/valgrind/LICENSE;md5=b95c9cb2560f157c60ea60ac1aa69469 \
+                    file://gecko-dev/security/sandbox/chromium/base/third_party/dmg_fp/LICENSE;md5=0893720de1a2e17053089dc16f743e11 \
+                    file://gecko-dev/security/sandbox/chromium/base/third_party/icu/LICENSE;md5=97cdee8fe9e91b393a616bc13c8081db \
+                    file://gecko-dev/security/sandbox/chromium/base/third_party/dynamic_annotations/LICENSE;md5=b6bd7011ecc1a4f7ac3525589f45e565 \
+                    file://gecko-dev/security/sandbox/chromium/base/third_party/superfasthash/LICENSE;md5=c66981f8ad23c9f279a5b9e07385128c \
+                    file://gecko-dev/security/nss/COPYING;md5=3b1e88e1b9c0b5a4b2881d46cce06a18 \
+                    file://gecko-dev/security/nss/gtests/google_test/gtest/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/security/nss/lib/freebl/mpi/doc/LICENSE;md5=491f158d09d948466afce85d6f1fe18f \
+                    file://gecko-dev/security/nss/lib/freebl/mpi/doc/LICENSE-MPL;md5=5d425c8f3157dbf212db2ec53d9e5132 \
+                    file://gecko-dev/security/nss/lib/freebl/scripts/LICENSE;md5=265a8643e554d22ab20058e798e3a49c \
+                    file://gecko-dev/security/nss/pkg/solaris/common_files/copyright;md5=e62b2edfdf024610e47ffdc6a6872f19 \
+                    file://gecko-dev/servo/components/hashglobe/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/servo/components/hashglobe/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/servo/components/malloc_size_of/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/servo/components/malloc_size_of/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/dom/webauthn/winwebauthn/LICENSE;md5=b98fddd052bb2f5ddbcdbd417ffb26a8 \
+                    file://gecko-dev/dom/webauthn/cbor-cpp/src/LICENSE;md5=86d3f3a95c324c9479bd8986968f4327 \
+                    file://gecko-dev/dom/webauthn/tests/pkijs/LICENSE;md5=af22c88191a18004661b4fac8a2cb292 \
+                    file://gecko-dev/dom/canvas/test/webgl-conf/checkout/deqp/LICENSE;md5=67d07a07ec29a50a3ded12b2ba952257 \
+                    file://gecko-dev/dom/canvas/test/webgl-conf/checkout/py/lint/LICENSE;md5=a1db1aa3129f75dbcda28ed81838bd40 \
+                    file://gecko-dev/dom/canvas/test/webgl-conf/checkout/closure-library/LICENSE;md5=e23fadd6ceef8c618fc1c65191d846fa \
+                    file://gecko-dev/dom/u2f/tests/pkijs/LICENSE;md5=af22c88191a18004661b4fac8a2cb292 \
+                    file://gecko-dev/dom/encoding/test/stringencoding-license.txt;md5=fada740e12e3582c6707831cfefc2c46 \
+                    file://gecko-dev/dom/media/platforms/ffmpeg/libav54/include/COPYING.LGPLv2.1;md5=e344c8fa836c3a41c4cbd79d7bd3a379 \
+                    file://gecko-dev/dom/media/platforms/ffmpeg/libav53/include/COPYING.LGPLv2.1;md5=e344c8fa836c3a41c4cbd79d7bd3a379 \
+                    file://gecko-dev/dom/media/platforms/ffmpeg/ffmpeg57/include/COPYING.LGPLv2.1;md5=e344c8fa836c3a41c4cbd79d7bd3a379 \
+                    file://gecko-dev/dom/media/platforms/ffmpeg/ffmpeg58/include/COPYING.LGPLv2.1;md5=e344c8fa836c3a41c4cbd79d7bd3a379 \
+                    file://gecko-dev/dom/media/platforms/ffmpeg/libav55/include/COPYING.LGPLv2.1;md5=e344c8fa836c3a41c4cbd79d7bd3a379 \
+                    file://gecko-dev/dom/tests/mochitest/ajax/jquery/MIT-LICENSE.txt;md5=864fa6008a25be650e3e3429ffa8aac8 \
+                    file://gecko-dev/dom/tests/mochitest/ajax/jquery/GPL-LICENSE.txt;md5=2c1778696d3ba68569a0352e709ae6b7 \
+                    file://gecko-dev/browser/LICENSE;md5=84be0f319ae05d3a46d536616d0fd285 \
+                    file://gecko-dev/browser/extensions/pdfjs/LICENSE;md5=2ee41112a44fe7014dce33e26468ba93 \
+                    file://gecko-dev/browser/extensions/pdfjs/content/web/cmaps/LICENSE;md5=18b1bb59e2bec1a9142d820c8f2b3a69 \
+                    file://gecko-dev/browser/components/extensions/schemas/LICENSE;md5=30032c6c531632af6547fa360395acd3 \
+                    file://gecko-dev/browser/components/aboutlogins/content/third-party/LICENSE;md5=e1f03ac60ae96919691eed06e369d464 \
+                    file://gecko-dev/browser/components/translation/cld2/internal/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/browser/components/pocket/content/panels/license.txt;md5=ab7e97e482e8479b5eee257aea18c928 \
+                    file://gecko-dev/browser/components/newtab/vendor/REDUX_LICENSE;md5=a0e9a029c575a47069a637f579057679 \
+                    file://gecko-dev/browser/components/newtab/vendor/REACT_REDUX_LICENSE;md5=d2bd9839e62deb35b153bed8042dff73 \
+                    file://gecko-dev/browser/components/newtab/vendor/REACT_AND_REACT_DOM_LICENSE;md5=901f6cd9846257b3a9c69dbd0a49caf1 \
+                    file://gecko-dev/browser/components/newtab/vendor/PROP_TYPES_LICENSE;md5=94f0d486b3ba1dd568004dc5cccd32bc \
+                    file://gecko-dev/browser/components/newtab/vendor/REACT_TRANSITION_GROUP_LICENSE;md5=2a5ccb288d78c794ab93bdc7f14c9cec \
+                    file://gecko-dev/browser/branding/official/LICENSE;md5=08cae7643db07d98bce35818606e6af4 \
+                    file://gecko-dev/browser/themes/LICENSE;md5=b54d56f7f3099eaf614874c1adc6e451 \
+                    file://gecko-dev/browser/base/content/overrides/app-license.html;md5=a7664034aab8635011c41ca24de04a0a \
+                    file://gecko-dev/parser/expat/COPYING;md5=1b71f681713d1256e1c23b0890920874 \
+                    file://gecko-dev/parser/xml/test/unit/CC-BY-LICENSE;md5=36ce916bb2371426e646dd426e3552d6 \
+                    file://gecko-dev/parser/htmlparser/tests/mochitest/html5lib_tree_construction/html5lib_license.txt;md5=21b0b2afd2d1d561dacac38ee4181637 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.https.html.ini;md5=b7873f98df9a5c9610da8f402aab68c3 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.https.html.ini;md5=36b4d0ff672dda42c95341ae0f1eb165 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-persistent-license.https.html.ini;md5=b8ba9dcb2d78ea8f787d0080ba3b02b2 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-persistent-license-events.https.html.ini;md5=e127a7b657bc3faac7bd0f3c021bc273 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-invalid-license.https.html.ini;md5=8dbfe8e1e6ab357de09cb9ea992c4d74 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-persistent-license-events.https.html.ini;md5=5beeb0c744f5ad17b6b42af65186ba63 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.https.html.ini;md5=bc04567e0da214101ec270bb3f28111f \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-destroy-persistent-license.https.html.ini;md5=13149d1829449f9212633c2f7ccb8609 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-persistent-license.https.html.ini;md5=63650f4bdae9991f1d75bd79acbecc0e \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-invalid-license.https.html.ini;md5=20df8855146d2c52e6c7cba21222a286 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.https.html.ini;md5=34247352993c6cfc0c79d69d11a93cb5 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-temporary-license-type.https.html.ini;md5=41e400a8961383a29a03edc6baa46f43 \
+                    file://gecko-dev/testing/web-platform/meta/encrypted-media/drm-mp4-playback-retrieve-persistent-license.https.html.ini;md5=8d237708b021c5c995db1444d90bc465 \
+                    file://gecko-dev/testing/web-platform/tests/LICENSE.md;md5=2cc01fda07bee5a50599a9512a40a957 \
+                    file://gecko-dev/testing/web-platform/tests/LICENSE;md5=2442eae40e9273b34ecd40f16a6a69ba \
+                    file://gecko-dev/testing/web-platform/tests/webrtc/third_party/sdp/LICENSE;md5=e92ca2e1d912bc865e4fdafeacb544f5 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.https.html;md5=11237ce0bc4a2ed90aaa09cc8a321c75 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-destroy-persistent-license.https.html;md5=32976da6dcbd01756d08879a0dadc30d \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-invalid-license.https.html;md5=950ac9b4a240fc512074746d6d2526e7 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-persistent-license.https.html;md5=4f44f48a0378efaae82dff74df183474 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-persistent-license-events.https.html;md5=61e53724bb68c97967bc35841d4d9748 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-persistent-license-events.https.html;md5=990b8e5ae92378fbe81b5e3a3a4e396d \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-temporary-license-type.https.html;md5=82aa7d26feae6e19f1fc6def8cf3d0a8 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-persistent-license.https.html;md5=0ee88f6efdb1924c8293517c008115c1 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-retrieve-persistent-license.https.html;md5=5a34e992c76b8f10d7fac44c7cd49485 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-invalid-license.https.html;md5=a6a54e1ed88b82f78c460ff0cfe269af \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.https.html;md5=bc270b6c0d8e38c5fdcbcd3aeab1c186 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.https.html;md5=0f383ad0f54b34031bb55930a185a0a6 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.https.html;md5=982157eed27b58addc45ad44273d52bc \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/resources/drm-retrieve-destroy-persistent-license.html;md5=771777b97ff6e59d119169b3f9dc6ef6 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/resources/clearkey-retrieve-destroy-persistent-license.html;md5=658f005c684ef183ff705a24afbe4297 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/resources/drm-retrieve-persistent-license.html;md5=a1236cf3f183fb64760b970ed29c00b8 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/resources/clearkey-retrieve-persistent-license.html;md5=5f94de62c7110bda96455285c8e1964b \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-persistent-license-events.js;md5=8c4669c2e9d03ce49009e16418f2f72a \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-destroy-persistent-license.js;md5=079f6fb0a23bbfb1dcdffc940e4f64ee \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/temporary-license-type.js;md5=439087fa5bef7ca5eed1548126bf0b76 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-persistent-license.js;md5=ed72a8dc0c42fb3152ac8da528507cef \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/invalid-license.js;md5=1a4159a48aecc382325f15844a4c9269 \
+                    file://gecko-dev/testing/web-platform/tests/encrypted-media/scripts/playback-retrieve-persistent-license.js;md5=361f49900c749f9551441205012e07e9 \
+                    file://gecko-dev/testing/web-platform/tests/webgpu/LICENSE.txt;md5=f596f73b88211e0d3ccc23d7657a3e91 \
+                    file://gecko-dev/testing/web-platform/tests/tools/html5lib/html5lib/tests/testdata/LICENSE;md5=b8b74c8ed8a3cbf346c759055c9146e1 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/funcsigs/LICENSE;md5=d6bc91dc8e5793892189fe7481a2d354 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/attrs/LICENSE;md5=d4ab25949a73fe7d4fdee93bcbdbf8ff \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/attrs/docs/license.rst;md5=0da481b581a7a2a95b0546f5968519cf \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/six/LICENSE;md5=f82eb3a1a7fade60bda5980935084b62 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/six/six-1.13.0.dist-info/LICENSE;md5=f82eb3a1a7fade60bda5980935084b62 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/pytest/LICENSE;md5=c39b24965f4aef64222cb35de9d47cc4 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/pytest/doc/en/license.rst;md5=8cbde116cf8f341add7a5397c3060301 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/pytest/doc/en/_themes/LICENSE;md5=da1f8f97f9ee64ad7466c3c531ad2c5b \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/enum/enum/LICENSE;md5=0a97a53a514564c20efd7b2e8976c87e \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/py/LICENSE;md5=a6bb0320b04a0a503f12f69fea479de9 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/more-itertools/LICENSE;md5=3396ea30f9d21389d7857719816f83b5 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/more-itertools/docs/license.rst;md5=e72f038a350db0d9f7b246aca346523e \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/pluggy/LICENSE;md5=338dad807ed9337bfaeb9979c3bfe20f \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/h2/LICENSE;md5=b6b2f6bbe76528af543242d606c14851 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/pywebsocket3/LICENSE;md5=b661a96f569e068e4af269db23b09a90 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/hyperframe/LICENSE;md5=5bf1c68e73fbaec2b1687b7e71514393 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/hpack/LICENSE;md5=5bf1c68e73fbaec2b1687b7e71514393 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/atomicwrites/LICENSE;md5=91cc36cfafeefb7863673bcfcb1d4da4 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/certifi/LICENSE;md5=f77f61d14ee6feac4228d3ebd26cc1f1 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/hyper/hyper/packages/rfc3986/LICENSE;md5=03731a0e7dbcb30cecdcec77cc93ec29 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/html5lib/LICENSE;md5=1ba5ada9e6fead1fdc32f43c9f10ba7c \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/html5lib/doc/license.rst;md5=cec7f22bc7ccb161c860291906841969 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/aioquic/LICENSE;md5=2b494dfe2eba298b2b91a376ad691748 \
+                    file://gecko-dev/testing/web-platform/tests/tools/third_party/aioquic/docs/license.rst;md5=2ac99589e1d6fa6df5274445a72da612 \
+                    file://gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-W3CD;md5=e0978be0711cc638bba54abc8acfd388 \
+                    file://gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-W3CTS;md5=45350ea134fb5f7b8106dc0077689115 \
+                    file://gecko-dev/testing/web-platform/tests/css/CSS2/LICENSE-BSD;md5=351cdcf48f5d951e6be61a8519911457 \
+                    file://gecko-dev/testing/web-platform/tests/css/css-color/LICENSE;md5=c62203036db44718bae5e47401ca536d \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-004.xht;md5=2fb1817730c78e29fa82781fc4c28715 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-031.xht;md5=e2219ec64432cce6d70ac4b6c5dd73fb \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-003.xht;md5=d8e0e480cab4dd7fe578af2f4654d2c4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-003.xht;md5=5eb6d12e43a77a717f5f20dd6da8aea2 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-001-ref.xht;md5=3375bb4df9aea441a8f9c1f8029bce01 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-007-ref.xht;md5=f063a9fd4f8eb5eb298f6ef2df774ac1 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-032.xht;md5=321cb57d64f67a03de2e55a31916eed7 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-018.xht;md5=0e3f83e26326b01694ecaf78a966b6fb \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-025.xht;md5=d090fc108d1c7bd978de7943834c115e \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-020.xht;md5=22bc7734930b5d1278a730770da9a25e \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-017.xht;md5=0def06c14637a4e33e0e601dc54c1ddd \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-011.xht;md5=dddcf61a0b7b70262c552d7fd6369fc0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-030-ref.xht;md5=d6c94be521cc7d4518cdba9becdc17af \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-032-ref.xht;md5=ef501f1373abe58be4cc368012c11235 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-015.xht;md5=bb71bb4bcbca23f27bc87dbf2cda9d49 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-005.xht;md5=101cee2129a26a2a080ccd391e1a8915 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-004-ref.xht;md5=20212225ed24862be020c5ac89cf8cd4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-013-ref.xht;md5=f0672ffadffaf75d139abd3860356d5b \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-001.xht;md5=f1450069369b2beee1aee7f7a4c77dfd \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-007.xht;md5=52f7b919921d822ac82e2d559c659872 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-033-ref.xht;md5=e7d33524fb7437c647aac7fad50337cb \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-027-ref.xht;md5=a21ddf1fc88ae6970bf529fcfe31ac96 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-024.xht;md5=0fafc0eb8134ce8def1e0b328fe80fa0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-004-ref.xht;md5=1b7a4b17b3c961df7a6816155c194c09 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-029-ref.xht;md5=32e55346c19772d56a4754e830118381 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-004.xht;md5=4db6ba82f347aec77af566c54ee92328 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-019.xht;md5=a515125094fd5c84e6c88839fa25f991 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-006.xht;md5=923854fb21e9230fe7f3b5c401f06c38 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-014.xht;md5=bc584d38013a8b2163382ddb64ad95f6 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-013.xht;md5=dd6025e5944832b07cc5cc0a822176b0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-001-ref.xht;md5=f7601c7c00915cbd422553d824ecb1a0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-003-ref.xht;md5=7f648c14ce6e2913fb4a21d20596fd40 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-030.xht;md5=72faea6b574dfdd5910ab1aca9f06333 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-021-ref.xht;md5=84ac15b55354aaabadcd9d62fda3c3ce \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-014-ref.xht;md5=6e65e21f808b16cb0800e7f6933863a9 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-002-ref.xht;md5=41dc3ecc2fdf69ba5f0a870dc0103830 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-008.xht;md5=cc5eb60411a28e5e9ab4e73cedfbfd85 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-023.xht;md5=af8e30abb241441b75ce3370e1fddfaa \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-007-ref.xht;md5=cd90421ff5cb5b64fdee51aedf1f361c \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-003-ref.xht;md5=ac2fe9d8761c4e90145972e018031a20 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-005-ref.xht;md5=635f794a6a3b2ec1efc689a0ca449f21 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-022-ref.xht;md5=1242380dd01fa20c5a3d912d0863a2b0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-019-ref.xht;md5=c061646872d94d1ee9aa0ac7ea52445f \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-016-ref.xht;md5=c91fca760967d0b61d5312c6998a29b4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-006-ref.xht;md5=04747e64027b12a4a3b604c02ab64d5c \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-011-ref.xht;md5=e7ed10a639dff93616e2daf6e447ac90 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-006-ref.xht;md5=4c7a1fd40501526c386e7fbb2c22026d \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-001.xht;md5=3dfe4785a0b2b598ce63517198a85514 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-008-ref.xht;md5=30cf2463ef98e31390aa9fadfc12ebb5 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-009-ref.xht;md5=eb1180e4a9845e241838cdff8e982293 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-002-ref.xht;md5=1abea2e699afa395d82548ebbe9e41d5 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-025-ref.xht;md5=a1c51c19eaff59d20a3bc819a5e00834 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-012-ref.xht;md5=a2136cf51227cb83e49d2bf893ebca55 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-008-ref.xht;md5=190deede8a08cfb5cce22b9187258b23 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-029.xht;md5=15b0cbb0e2827cf83cb34eb04a8b6936 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-010.xht;md5=5106ffb89b95e3dbe807bcd6d7aae8de \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-022.xht;md5=b0700d1f8418077435ce40a58f93a328 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-031-ref.xht;md5=51875dff8cbd155c26cbb859f769ea32 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-027.xht;md5=3032ed884436afc564088fb7fe657c1f \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-007.xht;md5=383fd69ab066dad8808d87141757e1da \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-021.xht;md5=b48638f5d93393edac4ab7b4fe7b2295 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-009-ref.xht;md5=eced57568a829dfabb5a88da190852a4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-020-ref.xht;md5=3229671132c3480cd4fda08378a733f5 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-015-ref.xht;md5=3499ab6f19b335a3b8ccdd039b513226 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-010.xht;md5=bc8257533f241215e7e4e74db8eea33d \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-023-ref.xht;md5=8213d00996b2b1adbfc7678cd693be9e \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-024-ref.xht;md5=a374322ee1d03ea18391af30188b5b01 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-026-ref.xht;md5=5825339906d0359de579893ae2a41e0a \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-010-ref.xht;md5=57dd4553bacd9ead46547982ee37e86c \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-028.xht;md5=c507d0849034ee542623a40702236129 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-028-ref.xht;md5=2a71d958c7c7c0145e6b50cc19e87d94 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-017-ref.xht;md5=35518772b2972e2217daa1c4bb7ea7dd \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-005.xht;md5=d8ce9ef628be616eb29e10bed55bcd00 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-016.xht;md5=67000ba02a1e9a4f5f945c194de186e3 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-005-ref.xht;md5=f2e801e52fd4b995ae2dadaa696b40f7 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-033.xht;md5=0bb231c06c8fb501400301526e05fca6 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-002.xht;md5=31c0c79b48e161f56b174d56f91ed298 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-002.xht;md5=94ae5a6149f6b9b3c8ddff78d688eae5 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-009.xht;md5=d5395c09c76aeb6e916b8582d97614d4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-026.xht;md5=06c90c0046e35576e80a1daab8c232e7 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-009.xht;md5=3c4c0d4f619a098266a65ba5f814f4fe \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-018-ref.xht;md5=25a2dd2b830d1cd9d26e57163a6894cf \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-006.xht;md5=4f836b6ae673905584b86d6979f2552c \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-012.xht;md5=32f9909a98597c42e1450e8b0a04bc15 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-licensee-008.xht;md5=ff8b69c85770da6a732e824fb8be8518 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/metadatadisplay-schema-license-010-ref.xht;md5=fc9758006359da0b9bde341b61917fcb \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-025.woff2;md5=0a001d9125c42549d615aea3d9940ff9 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-013.woff2;md5=3b308b641ce0ad02f76574e04f9b17ce \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-026.woff2;md5=8d3e684a3236e536fcffe3a382c3efbc \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-009.woff2;md5=75b29e03ca0d0367c5d559435d1370e2 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-032.woff2;md5=277f6012e7691b67b2fa1f3383e88566 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-007.woff2;md5=62b7bd82f29b271d4c3c96a20b9dec8c \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-027.woff2;md5=f5a6be32bc5299a56b6efe7eece399ab \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-024.woff2;md5=d38bf4e3e125b99e149657e6a3865780 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-005.woff2;md5=ef4374214cf971241d069ed5fae96087 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-001.woff2;md5=64eeebb355437af4a203c83938e3a9f2 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-023.woff2;md5=07bb17ecbacbaab1ea40df8df13872e4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-016.woff2;md5=f9ad9c8c3b1ef2f9e16a3c20c3ff00bb \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-005.woff2;md5=34c0b4b1d5df0ed07faad15d477efbc1 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-004.woff2;md5=02e416be41110d619923772f045a8047 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-029.woff2;md5=9f9920dd168e89d375559d8577b7d2d8 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-002.woff2;md5=027842cda041c9fcb09352dfdb42a3dc \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-012.woff2;md5=f2da3e85a368e8d03a8bc063f9fe1f69 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-010.woff2;md5=1d86e8664af11c9108ee59a4b2efb66f \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-009.woff2;md5=f9b4111e9479114c52e337f014856826 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-031.woff2;md5=fa8f0beda8224c0be2db60eae59beb0e \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-003.woff2;md5=0e7c3acab7923cccc2b645e53077344b \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-028.woff2;md5=36ec4cf6dfd40b65bf202e844052c589 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-002.woff2;md5=effe8c53fbf8fe967928c4c1d51fade3 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-011.woff2;md5=7c631cde0d262dc3b2ace5c0e467f3e7 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-008.woff2;md5=9ffa02c81895c0ff2aebb5a9e3e3b7a2 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-017.woff2;md5=49a22ee310b4a6f0ab41ef354bf9e9aa \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-014.woff2;md5=1b280ec83239ab103b832580dc5d04e0 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-019.woff2;md5=e903110d0c042f5d9a2e01a8b12c5779 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-015.woff2;md5=4936acc7564514d24c2d12ea7ecff503 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-020.woff2;md5=50a092c614f1f365766d8cb82791802b \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-008.woff2;md5=d19c76246b6cf99c1932c71da948faa1 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-030.woff2;md5=b88b57df255bd6949845b87e5f745eb4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-001.woff2;md5=02e416be41110d619923772f045a8047 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-022.woff2;md5=8b70626e87d32a3bf1cdd4b95873f115 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-010.woff2;md5=22813e720c84497822fac65811e6f09b \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-003.woff2;md5=c62680c6493ad6b253214956b7abf697 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-021.woff2;md5=aa25dcbc34b629875b7c116195f5cc4d \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-004.woff2;md5=64acff4c6f12b9371043ed8c713c00df \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-007.woff2;md5=22e4f1bccc34f7bd027094ec2bdbe3c3 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-033.woff2;md5=c8797be11fe99087a2f8004fb7c944df \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-006.woff2;md5=80f7f39f0d1bb2d2e59ac4947ac6a2a4 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-licensee-006.woff2;md5=5131966796e48e01b54be3a0e3b3ba43 \
+                    file://gecko-dev/testing/web-platform/tests/css/WOFF2/support/metadatadisplay-schema-license-018.woff2;md5=df3f5869f4dc447f5228fc3b3702c281 \
+                    file://gecko-dev/testing/web-platform/tests/css/css-ui/support/PTS/PngSuite.LICENSE;md5=3a757502a50e1a57b053b93080679172 \
+                    file://gecko-dev/testing/web-platform/tests/html/canvas/tools/LICENSE.txt;md5=600e252c0c2b9d35a7bdd58682a2a0fe \
+                    file://gecko-dev/testing/web-platform/tests/resources/webidl2/test/widlproc/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/testing/web-platform/tests/compression/third_party/pako/LICENSE;md5=a4f08d6b2d1bf3f3a1bc296a6109a25b \
+                    file://gecko-dev/testing/web-platform/tests/fonts/noto/NotoSansAdlam-hinted/LICENSE_OFL.txt;md5=55719faa0112708e946b820b24b14097 \
+                    file://gecko-dev/testing/web-platform/tests/fonts/noto/NotoSansCypriot-hinted/LICENSE_OFL.txt;md5=55719faa0112708e946b820b24b14097 \
+                    file://gecko-dev/testing/web-platform/tests/fonts/adobe-fonts/LICENSE;md5=1c5ea4405e956f4dedfc4a80c0cad77e \
+                    file://gecko-dev/testing/web-platform/tests/fonts/CSSTest/LICENSE;md5=4964e828aef88e3a863402df88305873 \
+                    file://gecko-dev/testing/mozharness/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/testing/xpcshell/dns-packet/LICENSE;md5=42014010547e55bd3bcac2fec8c45624 \
+                    file://gecko-dev/testing/xpcshell/node-http2/LICENSE;md5=c31b11bb2a31a6de12462726c57d481b \
+                    file://gecko-dev/testing/talos/talos/tests/dromaeo/LICENSE;md5=6cf30705187a2127cdc49afb88b58ca8 \
+                    file://gecko-dev/testing/mochitest/MochiKit/LICENSE.txt;md5=fcdb924401c350ec8250f7370d63519f \
+                    file://gecko-dev/testing/mochitest/tests/MochiKit-1.4.2/LICENSE.txt;md5=fcdb924401c350ec8250f7370d63519f \
+                    file://gecko-dev/testing/mochitest/pywebsocket/COPYING;md5=ab6d39797fc5338e72a1ebeb8e56ad88 \
+                    file://gecko-dev/testing/mozbase/mozproxy/mozproxy/backends/mitm/scripts/catapult/LICENSE;md5=06d3bfaeaf61df3a4734d9625ccd98ec \
+                    file://gecko-dev/testing/gtest/benchmark/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/testing/gtest/gtest/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/testing/gtest/gmock/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/build/pgo/blueprint/LICENSE;md5=1a914e973d9e13c86087f1960bca081a \
+                    file://gecko-dev/build/pymake/LICENSE;md5=d4f06cabb934e7a1e51de7654002d72c \
+                    file://gecko-dev/editor/libeditor/tests/browserscope/lib/richtext2/LICENSE;md5=2a944942e1496af1886903d274dedb13 \
+                    file://gecko-dev/editor/libeditor/tests/browserscope/lib/richtext/LICENSE;md5=2a944942e1496af1886903d274dedb13 \
+                    file://gecko-dev/third_party/python/funcsigs/LICENSE;md5=d6bc91dc8e5793892189fe7481a2d354 \
+                    file://gecko-dev/third_party/python/attrs/LICENSE;md5=d4ab25949a73fe7d4fdee93bcbdbf8ff \
+                    file://gecko-dev/third_party/python/attrs/docs/license.rst;md5=0da481b581a7a2a95b0546f5968519cf \
+                    file://gecko-dev/third_party/python/requests-unixsocket/LICENSE;md5=d2794c0df5b907fdace235a619d80314 \
+                    file://gecko-dev/third_party/python/voluptuous/COPYING;md5=9855ba150f2edb00d8e7a41554896ffb \
+                    file://gecko-dev/third_party/python/pipenv/LICENSE;md5=c0375bd8287a3ff407b814c7274bdbd4 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/crayons.LICENSE;md5=70bbfaf6a671c84059ac822a5c0e5aff \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/piptools/LICENSE;md5=2036ffc1508416a1642d16c0a7a8f050 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/safety/LICENSE;md5=558baaefeb02113f2331ea2fd536fa86 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/pipfile/LICENSE.APACHE;md5=a832eda17114b48ae16cda6a500941c2 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/pipfile/LICENSE;md5=faadaedca9251a90b205c9167578ce91 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/pipfile/LICENSE.BSD;md5=1a434b013252182e813a8ec9095c2798 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/LICENSE.txt;md5=25fba45109565f87de20bae85bc39452 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/six.LICENSE;md5=6f00d4a50713fa859858dd9abaa35b21 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/retrying.LICENSE;md5=175792518e4ac015ab6696d16c4f607e \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/distro.LICENSE;md5=d2794c0df5b907fdace235a619d80314 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/pyparsing.LICENSE;md5=fb46329938e6bc829b256e37d5c1e31a \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/appdirs.LICENSE.txt;md5=31625363c45eb0c67c630a2f73e438e4 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/ipaddress.LICENSE;md5=7f538584cc3407bf76042def7168548a \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/ordereddict.LICENSE;md5=7f0267460024072a9bbf135ee87a41b8 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/packaging/LICENSE.APACHE;md5=a832eda17114b48ae16cda6a500941c2 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/packaging/LICENSE;md5=faadaedca9251a90b205c9167578ce91 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/packaging/LICENSE.BSD;md5=7bef9bf4a8e4263634d0597e7ba100b8 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/progress/LICENSE;md5=aef5566ac4fede9815eccf124c281317 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/chardet/LICENSE;md5=a6f89e2100d9b6cdffcea4f398e37343 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/webencodings/LICENSE;md5=81fb24cd7823cce23b69f721993dce4d \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/cachecontrol/LICENSE.txt;md5=6dc7e1b428eda03d850209fdbd6c71f1 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/urllib3/LICENSE.txt;md5=ea114851ad9a8c311aac8728a681a067 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/distlib/LICENSE.txt;md5=f6a11430d5cd6e2cd3832ee94f22ddfc \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/colorama/LICENSE.txt;md5=14d0b64047ed8f510b51ce0495995358 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/requests/LICENSE;md5=979d6a23b143e13ea0e5e3aa81248820 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/certifi/LICENSE;md5=f77f61d14ee6feac4228d3ebd26cc1f1 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/lockfile/LICENSE;md5=2340dffbbfea534b58f1349984eeef72 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/html5lib/LICENSE;md5=1ba5ada9e6fead1fdc32f43c9f10ba7c \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/pkg_resources/LICENSE;md5=9a33897f1bca1160d7aad3835152e158 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/notpip/_vendor/idna/LICENSE.rst;md5=c9ba5acd829579492fd5eb306c7a0565 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/contoml/LICENSE;md5=5e3e091c9b41bd9fa67f44199d5e389c \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/pew/LICENSE;md5=838c366f69b72c5df05c96dff79b35f2 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/patched/prettytoml/LICENSE;md5=5e3e091c9b41bd9fa67f44199d5e389c \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/first.LICENSE;md5=02a1ec263ec81378040962c8cd16adda \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/six.LICENSE;md5=6f00d4a50713fa859858dd9abaa35b21 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/click-completion.LICENSE;md5=f845286e79cb0a6f836f209f9db5c91d \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/docopt.LICENSE-MIT;md5=09b77fb74986791a3d4a0e746a37d88f \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/click-didyoumean.LICENSE;md5=5d630248b2083ebbbb403b47a6598c6e \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/toml.LICENSE;md5=baf1cb960f5c94067ee2c84e5e6ff4ba \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pipdeptree.LICENSE;md5=a6d9ae8231dfc1bfacf7300b689da97f \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/parse.LICENSE;md5=42dda8fa2feee5098831629afb433135 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/appdirs.LICENSE.txt;md5=31625363c45eb0c67c630a2f73e438e4 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pathlib2.LICENSE.rst;md5=98acde304cdd38e796f0f4e5e7d803d4 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/delegator.py.LICENSE;md5=d9be2f8c22066de330883bfefa9724e3 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/semver.LICENSE.txt;md5=d9da679db3bdce30a1b4328d5c474f98 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/jinja2/LICENSE;md5=20c831f91dd3bd486020f672ba2be386 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/chardet/LICENSE;md5=a6f89e2100d9b6cdffcea4f398e37343 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pipreqs/LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pexpect/LICENSE;md5=1c7a725251880af8c6a148181665385b \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/LICENSE.txt;md5=25fba45109565f87de20bae85bc39452 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/six.LICENSE;md5=6f00d4a50713fa859858dd9abaa35b21 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/retrying.LICENSE;md5=175792518e4ac015ab6696d16c4f607e \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/distro.LICENSE;md5=d2794c0df5b907fdace235a619d80314 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/pyparsing.LICENSE;md5=fb46329938e6bc829b256e37d5c1e31a \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/appdirs.LICENSE.txt;md5=31625363c45eb0c67c630a2f73e438e4 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/ipaddress.LICENSE;md5=7f538584cc3407bf76042def7168548a \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/ordereddict.LICENSE;md5=7f0267460024072a9bbf135ee87a41b8 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/packaging/LICENSE.APACHE;md5=a832eda17114b48ae16cda6a500941c2 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/packaging/LICENSE;md5=faadaedca9251a90b205c9167578ce91 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/packaging/LICENSE.BSD;md5=7bef9bf4a8e4263634d0597e7ba100b8 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/progress/LICENSE;md5=aef5566ac4fede9815eccf124c281317 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/chardet/LICENSE;md5=a6f89e2100d9b6cdffcea4f398e37343 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/webencodings/LICENSE;md5=81fb24cd7823cce23b69f721993dce4d \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/cachecontrol/LICENSE.txt;md5=6dc7e1b428eda03d850209fdbd6c71f1 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/urllib3/LICENSE.txt;md5=ea114851ad9a8c311aac8728a681a067 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/distlib/LICENSE.txt;md5=f6a11430d5cd6e2cd3832ee94f22ddfc \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/colorama/LICENSE.txt;md5=14d0b64047ed8f510b51ce0495995358 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/requests/LICENSE;md5=979d6a23b143e13ea0e5e3aa81248820 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/certifi/LICENSE;md5=f77f61d14ee6feac4228d3ebd26cc1f1 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/lockfile/LICENSE;md5=2340dffbbfea534b58f1349984eeef72 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/html5lib/LICENSE;md5=1ba5ada9e6fead1fdc32f43c9f10ba7c \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/pkg_resources/LICENSE;md5=9a33897f1bca1160d7aad3835152e158 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pip9/_vendor/idna/LICENSE.rst;md5=c9ba5acd829579492fd5eb306c7a0565 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/yarg/LICENSE-REQUESTS;md5=c7869e52c8275537186de35e3cd5f9ec \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/yarg/LICENSE;md5=dfdd5c1e514c83a904880cd7daf6aff0 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/iso8601/LICENSE;md5=b05625f2336fa024e8d57e65c6595844 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/urllib3/LICENSE.txt;md5=ea114851ad9a8c311aac8728a681a067 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/click/LICENSE;md5=09e8b7869f94ba9e9a7b260d53c65dab \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/markupsafe/LICENSE;md5=c6d1adcf45d69359f256c1cea3254127 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/colorama/LICENSE.txt;md5=14d0b64047ed8f510b51ce0495995358 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/requirements/LICENSE.rst;md5=47b7f018daf3253a07b3f92640a5aeb8 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/dotenv/LICENSE;md5=55ee2c3471d386636a719c8ccac40b31 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/blindspin/LICENSE;md5=d9be2f8c22066de330883bfefa9724e3 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/backports/weakref.LICENSE;md5=b680ed99aa60d350c65a65914494207e \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/backports/shutil_get_terminal_size/LICENSE;md5=f3168ae4710d8f8c93f1b937983ae0dc \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/ptyprocess/LICENSE;md5=cfdcd51fa7d5808da4e74346ee394490 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/requests/LICENSE;md5=979d6a23b143e13ea0e5e3aa81248820 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/pytoml/LICENSE;md5=9d5793cced0c34e5c7806a2e4d8f6ba6 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/certifi/LICENSE;md5=f77f61d14ee6feac4228d3ebd26cc1f1 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/idna/LICENSE.rst;md5=c9ba5acd829579492fd5eb306c7a0565 \
+                    file://gecko-dev/third_party/python/pipenv/pipenv/vendor/shutilwhich/LICENSE;md5=077795f363606772d6063fef202b536f \
+                    file://gecko-dev/third_party/python/six/LICENSE;md5=f82eb3a1a7fade60bda5980935084b62 \
+                    file://gecko-dev/third_party/python/pathspec/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/third_party/python/mozilla-version/LICENSE;md5=65d26fcc2f35ea6a181ac777e42db1ea \
+                    file://gecko-dev/third_party/python/pytest/LICENSE;md5=c39b24965f4aef64222cb35de9d47cc4 \
+                    file://gecko-dev/third_party/python/pytest/doc/en/license.rst;md5=8cbde116cf8f341add7a5397c3060301 \
+                    file://gecko-dev/third_party/python/pytest/doc/en/_themes/LICENSE;md5=da1f8f97f9ee64ad7466c3c531ad2c5b \
+                    file://gecko-dev/third_party/python/pip-tools/LICENSE;md5=2036ffc1508416a1642d16c0a7a8f050 \
+                    file://gecko-dev/third_party/python/scandir/LICENSE.txt;md5=482ee62da51806409d432a80eed4e3ea \
+                    file://gecko-dev/third_party/python/pathlib2/LICENSE.rst;md5=042856c23a3e903b33bf361ea1cbe29a \
+                    file://gecko-dev/third_party/python/ecdsa/LICENSE;md5=66ffc5e30f76cbb5358fe54b645e5a1d \
+                    file://gecko-dev/third_party/python/distro/LICENSE;md5=d2794c0df5b907fdace235a619d80314 \
+                    file://gecko-dev/third_party/python/jsonschema/COPYING;md5=7a60a81c146ec25599a3e1dabb8610a8 \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/scandir-1.10.0-cp38-cp38-macosx_10_15_x86_64/scandir-1.10.0.dist-info/LICENSE.txt;md5=482ee62da51806409d432a80eed4e3ea \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/filelock-3.0.12-py3-none-any/filelock-3.0.12.dist-info/LICENSE;md5=911690f51af322440237a253d695d19f \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/typing-3.7.4.3-py2-none-any/typing-3.7.4.3.dist-info/LICENSE;md5=64fc2b30b67d0a8423c250e0386ed72f \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_metadata-1.1.3-py2.py3-none-any/importlib_metadata-1.1.3.dist-info/LICENSE;md5=e88ae122f3925d8bde8319060f2ddb8e \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/configparser-4.0.2-py2.py3-none-any/configparser-4.0.2.dist-info/LICENSE;md5=a33f38bbf47d48c70fe0d40e5f77498e \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/typing-3.7.4.1-py3-none-any/typing-3.7.4.1.dist-info/LICENSE;md5=64fc2b30b67d0a8423c250e0386ed72f \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_resources-1.0.2-py2.py3-none-any/importlib_resources-1.0.2.dist-info/LICENSE;md5=83e0e5b7f17df1a2ed3a8c4d7de25c01 \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/six-1.15.0-py2.py3-none-any/six-1.15.0.dist-info/LICENSE;md5=43cfc9e4ac0e377acfb9b76f56b8415d \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_metadata-1.7.0-py2.py3-none-any/importlib_metadata-1.7.0.dist-info/LICENSE;md5=e88ae122f3925d8bde8319060f2ddb8e \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/zipp-3.1.0-py3-none-any/zipp-3.1.0.dist-info/LICENSE;md5=7a7126e068206290f3fe9f8d6c713ea6 \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/importlib_resources-3.0.0-py2.py3-none-any/importlib_resources-3.0.0.dist-info/LICENSE;md5=e81780ac4c0888aaef94a7cb49b55edc \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/appdirs-1.4.4-py2.py3-none-any/appdirs-1.4.4.dist-info/LICENSE.txt;md5=31625363c45eb0c67c630a2f73e438e4 \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/zipp-1.2.0-py2.py3-none-any/zipp-1.2.0.dist-info/LICENSE;md5=a33f38bbf47d48c70fe0d40e5f77498e \
+                    file://gecko-dev/third_party/python/virtualenv/__virtualenv__/contextlib2-0.6.0.post1-py2.py3-none-any/contextlib2-0.6.0.post1.dist-info/LICENSE.txt;md5=43d1c7827e8fad6454b553caf0e1d734 \
+                    file://gecko-dev/third_party/python/virtualenv/virtualenv-20.0.31.dist-info/LICENSE;md5=0ce089158cf60a8ab6abb452b6405538 \
+                    file://gecko-dev/third_party/python/pyasn1/LICENSE.rst;md5=a14482d15c2249de3b6f0e8a47e021fd \
+                    file://gecko-dev/third_party/python/pyasn1/docs/source/license.rst;md5=f85751d724c00354787fb571eed34737 \
+                    file://gecko-dev/third_party/python/jsmin/LICENSE.txt;md5=3a3301ce2ad647e172f4a1016c67324d \
+                    file://gecko-dev/third_party/python/pyasn1-modules/LICENSE.txt;md5=280606d9c18f200e03e0c247ac61475a \
+                    file://gecko-dev/third_party/python/taskcluster-urls/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/python/pyyaml/LICENSE;md5=5591701d32590f9fa94f3bfee820b634 \
+                    file://gecko-dev/third_party/python/importlib_metadata/LICENSE;md5=e88ae122f3925d8bde8319060f2ddb8e \
+                    file://gecko-dev/third_party/python/compare-locales/compare_locales/tests/data/triple-license.dtd;md5=754ba8e7356c695202cb4cef2e914b3a \
+                    file://gecko-dev/third_party/python/py/LICENSE;md5=a6bb0320b04a0a503f12f69fea479de9 \
+                    file://gecko-dev/third_party/python/iso8601/LICENSE;md5=b05625f2336fa024e8d57e65c6595844 \
+                    file://gecko-dev/third_party/python/urllib3/LICENSE.txt;md5=65715c2eb961313d71b297dd5a04f85e \
+                    file://gecko-dev/third_party/python/diskcache/LICENSE;md5=9e046ce8fae71087134866418f646ec3 \
+                    file://gecko-dev/third_party/python/psutil-cp27-none-win_amd64/psutil-5.7.0.dist-info/LICENSE;md5=e35fd9f271d19d5f742f20a9d1f8bb8b \
+                    file://gecko-dev/third_party/python/more-itertools/LICENSE;md5=3396ea30f9d21389d7857719816f83b5 \
+                    file://gecko-dev/third_party/python/more-itertools/docs/license.rst;md5=e72f038a350db0d9f7b246aca346523e \
+                    file://gecko-dev/third_party/python/rsa/LICENSE;md5=a1d27014d3d0d7ae5fb973adab04ee30 \
+                    file://gecko-dev/third_party/python/psutil/LICENSE;md5=e35fd9f271d19d5f742f20a9d1f8bb8b \
+                    file://gecko-dev/third_party/python/pyflakes/LICENSE;md5=690c2d09203dc9e07c4083fc45ea981f \
+                    file://gecko-dev/third_party/python/pyrsistent/LICENCE.mit;md5=ca574f2891cf528b3e7a2ee570337e7c \
+                    file://gecko-dev/third_party/python/pluggy/LICENSE;md5=338dad807ed9337bfaeb9979c3bfe20f \
+                    file://gecko-dev/third_party/python/virtualenv-clone/LICENSE;md5=93a0ae49656299faef17cb7fece99e95 \
+                    file://gecko-dev/third_party/python/Click/LICENSE.rst;md5=c13ed890b210a882c1778216694c98c7 \
+                    file://gecko-dev/third_party/python/Click/docs/license.rst;md5=895bf57b1853bd15d83f8aa40c7dd0c1 \
+                    file://gecko-dev/third_party/python/blessings/LICENSE;md5=4c36985b553d025e4fe770308d00ed39 \
+                    file://gecko-dev/third_party/python/pystache/LICENSE;md5=eb4417802c56384aac71b34505528a60 \
+                    file://gecko-dev/third_party/python/python-hglib/LICENSE;md5=1259af087e19ca18d1be43b3b0d947be \
+                    file://gecko-dev/third_party/python/requests/LICENSE;md5=58c7e163c9f8ee037246da101c6afd1e \
+                    file://gecko-dev/third_party/python/Jinja2/LICENSE.rst;md5=5dc88300786f1c214c1e9827a5229462 \
+                    file://gecko-dev/third_party/python/mock-1.0.0/LICENSE.txt;md5=80e5ba73891255687dff3bee2b4cbb16 \
+                    file://gecko-dev/third_party/python/gyp/LICENSE;md5=ab828cb8ce4c62ee82945a11247b6bbd \
+                    file://gecko-dev/third_party/python/appdirs/LICENSE.txt;md5=31625363c45eb0c67c630a2f73e438e4 \
+                    file://gecko-dev/third_party/python/atomicwrites/LICENSE;md5=91cc36cfafeefb7863673bcfcb1d4da4 \
+                    file://gecko-dev/third_party/python/coverage/LICENSE.txt;md5=2ee41112a44fe7014dce33e26468ba93 \
+                    file://gecko-dev/third_party/python/certifi/LICENSE;md5=f77f61d14ee6feac4228d3ebd26cc1f1 \
+                    file://gecko-dev/third_party/python/sentry-sdk/LICENSE;md5=0c79f8d3c91fc847350efd28bfe0a341 \
+                    file://gecko-dev/third_party/python/cbor2/LICENSE.txt;md5=f0e423eea5c91e7aa21bdb70184b3e53 \
+                    file://gecko-dev/third_party/python/enum34/enum/LICENSE;md5=0a97a53a514564c20efd7b2e8976c87e \
+                    file://gecko-dev/third_party/python/glean_parser/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/python/zipp/LICENSE;md5=a33f38bbf47d48c70fe0d40e5f77498e \
+                    file://gecko-dev/third_party/python/yamllint/LICENSE;md5=d32239bcb673463ab874e80d47fae504 \
+                    file://gecko-dev/third_party/python/futures/LICENSE;md5=dd6708d05936d3f6c4e20ed14c87b5e3 \
+                    file://gecko-dev/third_party/python/MarkupSafe/LICENSE.rst;md5=ffeffa59c90c9c4a033c7574f8f3fb75 \
+                    file://gecko-dev/third_party/python/MarkupSafe/docs/license.rst;md5=0d25795fa6e523288593a3841b232731 \
+                    file://gecko-dev/third_party/python/responses/LICENSE;md5=0e601511a8517f4daf688a8eb95be7a2 \
+                    file://gecko-dev/third_party/dav1d/COPYING;md5=c8055cfe7548dfdaa3a6dc45d8793669 \
+                    file://gecko-dev/third_party/rust/fake-simd/LICENSE-MIT;md5=4311034aa04489226c1fc3f816dbfb5a \
+                    file://gecko-dev/third_party/rust/fake-simd/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/winreg/LICENSE;md5=061f73ca832574cc5adc608226ddf23f \
+                    file://gecko-dev/third_party/rust/adler32/LICENSE;md5=c135cca7c061a49fa626c533271d328b \
+                    file://gecko-dev/third_party/rust/foreign-types/LICENSE-MIT;md5=5f2ff804b57ef8b384f25f70b5b083a8 \
+                    file://gecko-dev/third_party/rust/foreign-types/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/num-bigint/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-bigint/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/plain/LICENSE-MIT;md5=d5c01f3949a783178638a142b670702e \
+                    file://gecko-dev/third_party/rust/plain/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/quick-error/LICENSE-MIT;md5=ace816fef86df21ff6e91c4fa80b590c \
+                    file://gecko-dev/third_party/rust/quick-error/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/tower-service/LICENSE;md5=e306ced93cbc3a7ec73a5c7980a048ff \
+                    file://gecko-dev/third_party/rust/wasmparser-0.48.2/LICENSE;md5=4b51c84a848a71552dd78afccab2d763 \
+                    file://gecko-dev/third_party/rust/fuchsia-cprng/LICENSE;md5=b250d14fc7456481876836ddff991108 \
+                    file://gecko-dev/third_party/rust/mio-named-pipes/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/mio-named-pipes/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/float-cmp/LICENSE;md5=b31373f01a987f924fb47189761e6344 \
+                    file://gecko-dev/third_party/rust/crossbeam-utils-0.6.5/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/crossbeam-utils-0.6.5/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/serde_repr/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/serde_repr/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/mio/LICENSE;md5=acd38581826c5370a3c2d7aa40ebecfb \
+                    file://gecko-dev/third_party/rust/linked-hash-map/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/linked-hash-map/LICENSE-APACHE;md5=8f7bb094c7232b058c7e9f2e431f389c \
+                    file://gecko-dev/third_party/rust/winapi-x86_64-pc-windows-gnu/lib/libwinapi_oemlicense.a;md5=df5777653c073562835adfde5cb9f11f \
+                    file://gecko-dev/third_party/rust/rand_hc/COPYRIGHT;md5=86438b2332d07437f7ddc2fe9fe4edd2 \
+                    file://gecko-dev/third_party/rust/rand_hc/LICENSE-MIT;md5=3e5ac381c4a62434227d22badbc7828b \
+                    file://gecko-dev/third_party/rust/rand_hc/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/zip/LICENSE;md5=f4211eedb8320454de606a74ca9c1810 \
+                    file://gecko-dev/third_party/rust/tokio-0.1.11/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/spirv-cross-internal/src/vendor/SPIRV-Cross/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/wasmparser/LICENSE;md5=4b51c84a848a71552dd78afccab2d763 \
+                    file://gecko-dev/third_party/rust/safemem/LICENSE-MIT;md5=5204edc017946ae7c0979ca5f02f8eb5 \
+                    file://gecko-dev/third_party/rust/safemem/LICENSE-APACHE;md5=1d13600d35d841f24921c4ba36a93f59 \
+                    file://gecko-dev/third_party/rust/cose-c/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/crossbeam-epoch/LICENSE-MIT;md5=bfc135094473744ed4f9ac29560ea3e6 \
+                    file://gecko-dev/third_party/rust/crossbeam-epoch/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/winapi-0.2.8/LICENSE.md;md5=c594aa041381fb4c5d68d8e54221ba6a \
+                    file://gecko-dev/third_party/rust/serde/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/serde/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/stable_deref_trait/LICENSE-MIT;md5=5434f8986388952c209d3be8db2ea2a1 \
+                    file://gecko-dev/third_party/rust/stable_deref_trait/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rayon/LICENSE-MIT;md5=d13d681ca7a3a8057993e4008037d598 \
+                    file://gecko-dev/third_party/rust/rayon/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/glob/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/glob/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/unicode-bidi/COPYRIGHT;md5=0c86ed304b87c0ed5530adefe4d4dd29 \
+                    file://gecko-dev/third_party/rust/unicode-bidi/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/unicode-bidi/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/bytes-0.4.9/LICENSE;md5=b9ef559d4c4c1ecee0a5d244a3658efa \
+                    file://gecko-dev/third_party/rust/same-file/COPYING;md5=51464c725059af585b116c1df24dad4a \
+                    file://gecko-dev/third_party/rust/ringbuf/LICENSE-MIT;md5=6e1e7ed7b3fbb348d93afd3a283457fb \
+                    file://gecko-dev/third_party/rust/ringbuf/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cookie/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/cookie/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/derive_more/LICENSE;md5=1ec4bd7d26526ab02a3c82eb92e8c2ee \
+                    file://gecko-dev/third_party/rust/rkv-0.10.4/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/tempfile/LICENSE-MIT;md5=e0a3ed49769450f8d26c56bd4ef6ef71 \
+                    file://gecko-dev/third_party/rust/tempfile/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/matches/LICENSE;md5=4d784fe27beeb88a8697fa6f2b4b152d \
+                    file://gecko-dev/third_party/rust/authenticator/LICENSE;md5=855c08d14d213684efdcc6eb37694faa \
+                    file://gecko-dev/third_party/rust/peek-poke-derive/LICENSE-MIT;md5=a3a122bd021649feab1523e3e300f102 \
+                    file://gecko-dev/third_party/rust/peek-poke-derive/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/thiserror/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/thiserror/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/tokio-tcp/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/cranelift-codegen-shared/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/id-arena/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/id-arena/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/moz_cbor/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/malloc_size_of_derive/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/malloc_size_of_derive/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/futures-cpupool/LICENSE-MIT;md5=051901372335ad8be2c192d04d53830c \
+                    file://gecko-dev/third_party/rust/futures-cpupool/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/num-iter/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-iter/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/memoffset/LICENSE;md5=a1574130be3735fa47b2ac6ee6dba590 \
+                    file://gecko-dev/third_party/rust/chrono/LICENSE.txt;md5=c64162c27dbf4c0a61f6487430b839ee \
+                    file://gecko-dev/third_party/rust/thread_local/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/thread_local/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rustc-demangle/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/rustc-demangle/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/serde_urlencoded/LICENSE-MIT;md5=891ecdc6911fc5df130ff02b163ca218 \
+                    file://gecko-dev/third_party/rust/serde_urlencoded/LICENSE-APACHE;md5=22a53954e4e0ec258dfce4391e905dac \
+                    file://gecko-dev/third_party/rust/futures-task/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-task/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/rust_cascade/license.txt;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/serde_yaml/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/serde_yaml/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/dns-parser/LICENSE-MIT;md5=c06ffaf15ebfa6ce2db8b26ae9764682 \
+                    file://gecko-dev/third_party/rust/dns-parser/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/itertools/LICENSE-MIT;md5=8aeacaf3072ecad0df7c60621f5b3fc5 \
+                    file://gecko-dev/third_party/rust/itertools/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cubeb-coreaudio/LICENSE;md5=67b7bf60fbe269c22a93f2215592c075 \
+                    file://gecko-dev/third_party/rust/tokio-fs/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/cranelift-bforest/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/wat/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/crossbeam-deque/LICENSE-MIT;md5=bfc135094473744ed4f9ac29560ea3e6 \
+                    file://gecko-dev/third_party/rust/crossbeam-deque/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rand_chacha/COPYRIGHT;md5=86438b2332d07437f7ddc2fe9fe4edd2 \
+                    file://gecko-dev/third_party/rust/rand_chacha/LICENSE-MIT;md5=08cf50287469d314ddbee33f572260a7 \
+                    file://gecko-dev/third_party/rust/rand_chacha/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/memmap/LICENSE-MIT;md5=7a5907adc45717703958b0115eae894e \
+                    file://gecko-dev/third_party/rust/memmap/LICENSE-APACHE;md5=3d1bd8e772eced7e102dc3db386f4b9c \
+                    file://gecko-dev/third_party/rust/rlbox_lucet_sandbox/LICENSE;md5=27ed544fc1a42ea794d838fb8e60e73c \
+                    file://gecko-dev/third_party/rust/inflate/LICENSE;md5=d180527549266f844ace5d3abc574654 \
+                    file://gecko-dev/third_party/rust/hawk/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/toml/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/toml/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/scroll_derive/LICENSE;md5=17a1d3575545a1e1c7c7f835388beafe \
+                    file://gecko-dev/third_party/rust/atom/LICENSE;md5=34400b68072d710fecd0a2940a0d1658 \
+                    file://gecko-dev/third_party/rust/dtoa/LICENSE-MIT;md5=fbb214b1dfb674e6933c347df8e30009 \
+                    file://gecko-dev/third_party/rust/dtoa/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/tokio/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/libc/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/libc/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ahash/LICENSE-MIT;md5=a8df55ddc4d271b16545ca6e12c0dc4b \
+                    file://gecko-dev/third_party/rust/ahash/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/goblin/LICENSE;md5=2f628884ed1fcd3d9a4542839b9027c7 \
+                    file://gecko-dev/third_party/rust/lock_api/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/lock_api/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/num-rational/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-rational/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cubeb-core/LICENSE;md5=efe698607ad21a24642c691ac1ac1537 \
+                    file://gecko-dev/third_party/rust/autocfg-0.1.6/LICENSE-MIT;md5=aa27cd9e805135543eebbce50c8253c8 \
+                    file://gecko-dev/third_party/rust/autocfg-0.1.6/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/serde_bytes/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/serde_bytes/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/num-integer/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-integer/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/raw-cpuid/LICENSE.md;md5=c1c7f22b1fe01e683e2da5160682f7c9 \
+                    file://gecko-dev/third_party/rust/encoding_c/COPYRIGHT;md5=ac368953eb0706d85631888c1e04c331 \
+                    file://gecko-dev/third_party/rust/encoding_c/LICENSE-MIT;md5=2200b0811d6a5488ac8691e89004f47c \
+                    file://gecko-dev/third_party/rust/encoding_c/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/http-body/LICENSE;md5=76b072e58c9fc2bda7c67cbc45867988 \
+                    file://gecko-dev/third_party/rust/webrtc-sdp/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/cssparser/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/third_party/rust/gleam/COPYING;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/gleam/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/gleam/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/xml-rs/LICENSE;md5=28c2e1e5bcf01f476139f9f906392a9f \
+                    file://gecko-dev/third_party/rust/term_size/LICENSE-MIT;md5=e552a266bd17afa86acbc46ce3d88cea \
+                    file://gecko-dev/third_party/rust/term_size/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/getrandom/LICENSE-MIT;md5=08cf50287469d314ddbee33f572260a7 \
+                    file://gecko-dev/third_party/rust/getrandom/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/base64-0.10.1/LICENSE-MIT;md5=8acfa287c0ceb4a482e7c74d1e500e27 \
+                    file://gecko-dev/third_party/rust/base64-0.10.1/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ron/LICENSE-MIT;md5=6f592951c36675a27b5d5dc6eff826f4 \
+                    file://gecko-dev/third_party/rust/ron/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/plane-split/LICENSE;md5=9f24060968214d06e48b1dfe2d6f055a \
+                    file://gecko-dev/third_party/rust/scoped-tls/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/scoped-tls/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/futures-0.1.29/LICENSE-MIT;md5=051901372335ad8be2c192d04d53830c \
+                    file://gecko-dev/third_party/rust/futures-0.1.29/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/jsparagus/LICENSE-MIT;md5=f862b6068a66c2fc32396dc246808ecf \
+                    file://gecko-dev/third_party/rust/jsparagus/LICENSE;md5=581bd8ca92a59cb81ce7c44ff79d1567 \
+                    file://gecko-dev/third_party/rust/jsparagus/LICENSE-APACHE-2.0;md5=390f1213d0aba855389e3098cd2a0a13 \
+                    file://gecko-dev/third_party/rust/hashbrown/LICENSE-MIT;md5=a8df55ddc4d271b16545ca6e12c0dc4b \
+                    file://gecko-dev/third_party/rust/hashbrown/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rusqlite/LICENSE;md5=e106b6bf61c8da03877edcb074e15f82 \
+                    file://gecko-dev/third_party/rust/cranelift-frontend/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/either/LICENSE-MIT;md5=8aeacaf3072ecad0df7c60621f5b3fc5 \
+                    file://gecko-dev/third_party/rust/either/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/tokio-timer/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/comedy/LICENSE-MIT;md5=8fc3bbe563883436b28718055e84c55e \
+                    file://gecko-dev/third_party/rust/comedy/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/devd-rs/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/runloop/LICENSE;md5=9f24060968214d06e48b1dfe2d6f055a \
+                    file://gecko-dev/third_party/rust/copyless/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/dbus/LICENSE-MIT;md5=86713ff7b5518754f2d1d5dd8dbfa694 \
+                    file://gecko-dev/third_party/rust/dbus/LICENSE-APACHE;md5=ec4df47d4e83d756a74349582f3e99fb \
+                    file://gecko-dev/third_party/rust/digest/LICENSE-MIT;md5=7232afe8a77d9cd4478063ecb985e886 \
+                    file://gecko-dev/third_party/rust/digest/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/libdbus-sys/LICENSE-MIT;md5=86713ff7b5518754f2d1d5dd8dbfa694 \
+                    file://gecko-dev/third_party/rust/libdbus-sys/LICENSE-APACHE;md5=ec4df47d4e83d756a74349582f3e99fb \
+                    file://gecko-dev/third_party/rust/objc/LICENSE.txt;md5=57ab83ac21dce0778a7f0012a1dd9aeb \
+                    file://gecko-dev/third_party/rust/fuchsia-zircon/LICENSE;md5=854771c87d175dd2322b6141acc34bda \
+                    file://gecko-dev/third_party/rust/percent-encoding/LICENSE-MIT;md5=d188c55b194c6aaf8738d1b9a8934007 \
+                    file://gecko-dev/third_party/rust/percent-encoding/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/clang-sys/LICENSE.txt;md5=d273d63619c9aeaf15cdaf76422c4f87 \
+                    file://gecko-dev/third_party/rust/proc-macro2/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/proc-macro2/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/serde_derive/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/serde_derive/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/winapi-i686-pc-windows-gnu/lib/libwinapi_oemlicense.a;md5=0db57cd9adef2de5bc5d32f9bd53e335 \
+                    file://gecko-dev/third_party/rust/cose/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/hibitset/LICENSE-MIT;md5=28d0b400d25ad63a7fb3b73bbc9dbaea \
+                    file://gecko-dev/third_party/rust/hibitset/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/proc-macro-hack/LICENSE-MIT;md5=43b7ab2f472dc6b02135b86d8db49c16 \
+                    file://gecko-dev/third_party/rust/proc-macro-hack/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/bytemuck/LICENSE-ZLIB.md;md5=c6483f2f80d84fbcb6972900a17eb986 \
+                    file://gecko-dev/third_party/rust/ws/LICENSE;md5=7a0f1f939261e81fd39805f4eee36c19 \
+                    file://gecko-dev/third_party/rust/hex/LICENSE-MIT;md5=ccd708262899f3b9baca0956d8383a76 \
+                    file://gecko-dev/third_party/rust/hex/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/cranelift-codegen/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/peeking_take_while/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/peeking_take_while/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/jobserver/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/jobserver/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/num-traits/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-traits/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ryu/LICENSE-APACHE;md5=86d3f3a95c324c9479bd8986968f4327 \
+                    file://gecko-dev/third_party/rust/ryu/LICENSE-BOOST;md5=e4224ccaecb14d942c71d31bef20d78c \
+                    file://gecko-dev/third_party/rust/regalloc/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/try-lock/LICENSE;md5=e3c049ecfbd9971bbc4206ca158824ed \
+                    file://gecko-dev/third_party/rust/crossbeam-queue/LICENSE-THIRD-PARTY;md5=8255b6bac8f56899880fd7d1d5cf9e35 \
+                    file://gecko-dev/third_party/rust/crossbeam-queue/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/crossbeam-queue/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/msdos_time/LICENSE-MIT;md5=522f8d6ed4f0d2368ec4425763c54a16 \
+                    file://gecko-dev/third_party/rust/msdos_time/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/hermit-abi/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/hermit-abi/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rkv/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/futures-util/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-util/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/cast/LICENSE-MIT;md5=1d4f902e673e86261f3dcad24e724781 \
+                    file://gecko-dev/third_party/rust/cast/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/headers/LICENSE;md5=bf9532726134a5cddb0b9fb960c67029 \
+                    file://gecko-dev/third_party/rust/cranelift-entity-0.41.0/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/cranelift-codegen-meta/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/cranelift-codegen-meta/src/isa/x86/legalize.rs;md5=643c9a6d8ec8e103fa6041dc618c0476 \
+                    file://gecko-dev/third_party/rust/cranelift-codegen-meta/src/shared/legalize.rs;md5=52d8981b0c521592805c803634ecd55a \
+                    file://gecko-dev/third_party/rust/redox_users/LICENSE;md5=6e6a344d427ae03cea5c51befe700295 \
+                    file://gecko-dev/third_party/rust/tokio-udp/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/bitreader/LICENSE-MIT;md5=d858a023b0ceaa1fd9f35d4b75524e98 \
+                    file://gecko-dev/third_party/rust/bitreader/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/bumpalo/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/bumpalo/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/byte-tools/LICENSE-MIT;md5=4311034aa04489226c1fc3f816dbfb5a \
+                    file://gecko-dev/third_party/rust/byte-tools/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/synstructure/LICENSE;md5=cc272e9322fe8cb3e01e1e22bca8fef9 \
+                    file://gecko-dev/third_party/rust/mime_guess/LICENSE;md5=cd8e629dca6dfa205c0a489ad7014247 \
+                    file://gecko-dev/third_party/rust/vec_map/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/vec_map/LICENSE-APACHE;md5=8f7bb094c7232b058c7e9f2e431f389c \
+                    file://gecko-dev/third_party/rust/storage-map/LICENSE;md5=86d3f3a95c324c9479bd8986968f4327 \
+                    file://gecko-dev/third_party/rust/tokio-util/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/uuid/COPYRIGHT;md5=22fde48a02d39c887b315b40aac65f90 \
+                    file://gecko-dev/third_party/rust/uuid/LICENSE-MIT;md5=7b3129ca2bfddac5c193cf79ee006d31 \
+                    file://gecko-dev/third_party/rust/uuid/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/mio-extras/LICENSE-MIT;md5=c1c6c35f14fdd37238b8cfe0132e520f \
+                    file://gecko-dev/third_party/rust/mio-extras/LICENSE-APACHE;md5=04763ef79676f93527ff62c409b4356e \
+                    file://gecko-dev/third_party/rust/podio/LICENSE-MIT;md5=892fdac1129a7d86e58949f243ff0594 \
+                    file://gecko-dev/third_party/rust/podio/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/wio/LICENSE-MIT;md5=ee8848e0f155a34c934e6ce666c678ee \
+                    file://gecko-dev/third_party/rust/wio/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/quote/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/quote/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/mapped_hyph/COPYRIGHT;md5=37663d865641e8852a76e32314ebb213 \
+                    file://gecko-dev/third_party/rust/mapped_hyph/LICENSE-MIT;md5=e1b9fcb0aa8b8f6dde5cc89bad887bf9 \
+                    file://gecko-dev/third_party/rust/mapped_hyph/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/tokio-uds/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/tokio-reactor/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/error-chain/LICENSE-MIT;md5=c76907fee561ace8d07ebb1e712d9b6d \
+                    file://gecko-dev/third_party/rust/error-chain/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/binary-space-partition/LICENSE;md5=9f24060968214d06e48b1dfe2d6f055a \
+                    file://gecko-dev/third_party/rust/target-lexicon/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/image/LICENSE;md5=fd1cce33fadbda94827c48546e37a4ae \
+                    file://gecko-dev/third_party/rust/serde_json/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/serde_json/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/block-buffer/LICENSE-MIT;md5=db8988fb55e64671a78e93339449dc49 \
+                    file://gecko-dev/third_party/rust/block-buffer/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/paste/LICENSE-MIT;md5=bcc5775669cb6a43b1b9eae56039a8f0 \
+                    file://gecko-dev/third_party/rust/paste/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ffi-support/LICENSE-MIT;md5=463a0b825c3eb2b28b14b307ea308dc4 \
+                    file://gecko-dev/third_party/rust/ffi-support/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/memchr/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/memchr/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/memchr/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/mio-uds/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/mio-uds/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cc/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/cc/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/core-graphics/COPYRIGHT;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/core-graphics/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/core-graphics/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/leb128/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/leb128/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/libudev/LICENSE;md5=bbd2acd29c4ba5d4591b03e2757c04a3 \
+                    file://gecko-dev/third_party/rust/core-foundation-sys/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/core-foundation-sys/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/dogear/LICENSE;md5=86d3f3a95c324c9479bd8986968f4327 \
+                    file://gecko-dev/third_party/rust/base64/LICENSE-MIT;md5=8acfa287c0ceb4a482e7c74d1e500e27 \
+                    file://gecko-dev/third_party/rust/base64/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cmake/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/cmake/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/glsl/LICENSE;md5=3b4f32f21616a39a3900d1ec54676497 \
+                    file://gecko-dev/third_party/rust/tinystr/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/tinystr/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rustc_version/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/rustc_version/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/new_debug_unreachable/LICENSE-MIT;md5=23536a298d2ea9574cce356b6926b0d7 \
+                    file://gecko-dev/third_party/rust/darling/LICENSE;md5=5669b5b43b8d7c31fa445d94c5263ac8 \
+                    file://gecko-dev/third_party/rust/cstr-macros/LICENSE;md5=ead1a0b12ad3434b78eb948fa6ecc861 \
+                    file://gecko-dev/third_party/rust/autocfg/LICENSE-MIT;md5=aa27cd9e805135543eebbce50c8253c8 \
+                    file://gecko-dev/third_party/rust/autocfg/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/dirs/LICENSE-MIT;md5=13dbcedc3bb56c9861982ad44e5cea65 \
+                    file://gecko-dev/third_party/rust/dirs/LICENSE-APACHE;md5=8cc789b082b3d97e1ccc5261f8594d3f \
+                    file://gecko-dev/third_party/rust/termcolor/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/termcolor/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/termcolor/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/futures-io/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-io/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/httparse/LICENSE-MIT;md5=60fa81f31371ffcc109ad080098ffd35 \
+                    file://gecko-dev/third_party/rust/httparse/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/itoa/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/itoa/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/lmdb-rkv-sys/lmdb/libraries/liblmdb/COPYRIGHT;md5=cf2b7f0bcc5c023691a7be8e006444e6 \
+                    file://gecko-dev/third_party/rust/lmdb-rkv-sys/lmdb/libraries/liblmdb/LICENSE;md5=153d07ef052c4a37a8fac23bc6031972 \
+                    file://gecko-dev/third_party/rust/cexpr/LICENSE-MIT;md5=13f69a5671fb7645560925e7014ff052 \
+                    file://gecko-dev/third_party/rust/cexpr/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/nix/LICENSE;md5=c3daafddcb5c838aa721e37010f5dca1 \
+                    file://gecko-dev/third_party/rust/tokio-current-thread/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/core-text/COPYRIGHT;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/core-text/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/core-text/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/darling_macro/LICENSE;md5=5669b5b43b8d7c31fa445d94c5263ac8 \
+                    file://gecko-dev/third_party/rust/yaml-rust/LICENSE-MIT;md5=a02dd515239a3e6120ea15b33a72b8ae \
+                    file://gecko-dev/third_party/rust/yaml-rust/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ppv-lite86/LICENSE-MIT;md5=f506965760cf1b01ce337cc6b6540d40 \
+                    file://gecko-dev/third_party/rust/ppv-lite86/LICENSE-APACHE;md5=a0f1a51804617ebdf5b189ce33676cff \
+                    file://gecko-dev/third_party/rust/pin-utils/LICENSE-MIT;md5=14941112c0f271c50028aac82df494a6 \
+                    file://gecko-dev/third_party/rust/pin-utils/LICENSE-APACHE;md5=1d92c6023837592b6664900ea2804146 \
+                    file://gecko-dev/third_party/rust/cocoa/COPYRIGHT;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/cocoa/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/cocoa/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/tokio-executor/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/chardetng_c/COPYRIGHT;md5=4c0d42d5650b58e4a98f07c5725ace9c \
+                    file://gecko-dev/third_party/rust/chardetng_c/LICENSE-MIT;md5=e1b9fcb0aa8b8f6dde5cc89bad887bf9 \
+                    file://gecko-dev/third_party/rust/chardetng_c/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/rand/COPYRIGHT;md5=86438b2332d07437f7ddc2fe9fe4edd2 \
+                    file://gecko-dev/third_party/rust/rand/LICENSE-MIT;md5=08cf50287469d314ddbee33f572260a7 \
+                    file://gecko-dev/third_party/rust/rand/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/smallbitvec/LICENSE-MIT;md5=cf62f056cb4bfb8862d9ffd8f73e52e7 \
+                    file://gecko-dev/third_party/rust/smallbitvec/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/clap/LICENSE-MIT;md5=e552a266bd17afa86acbc46ce3d88cea \
+                    file://gecko-dev/third_party/rust/static_assertions/LICENSE-MIT;md5=5995c4ae495fbf00cd0ce7f09bf089c3 \
+                    file://gecko-dev/third_party/rust/static_assertions/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/fallible-streaming-iterator/LICENSE-MIT;md5=169adf333d4036757fec5d51d0876fd3 \
+                    file://gecko-dev/third_party/rust/fallible-streaming-iterator/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/shift_or_euc_c/COPYRIGHT;md5=e7cebcec25a8df1fde26ad0b9c706bfe \
+                    file://gecko-dev/third_party/rust/shift_or_euc_c/LICENSE-MIT;md5=bdb2a6ce4f4a9875e74762c3809c8c04 \
+                    file://gecko-dev/third_party/rust/shift_or_euc_c/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/atty/LICENSE;md5=b91baa42fecbf9e40a164d0390b781a3 \
+                    file://gecko-dev/third_party/rust/time/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/time/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/http/LICENSE-MIT;md5=7b387729760ce0b1aa89dfc953c36b9d \
+                    file://gecko-dev/third_party/rust/http/LICENSE-APACHE;md5=f5f71fa9e7f844dd168c78827ed7ace4 \
+                    file://gecko-dev/third_party/rust/base16/LICENSE-CC0;md5=65d3616852dbf7b1a6d4b53b00626032 \
+                    file://gecko-dev/third_party/rust/rust-argon2/LICENSE-MIT;md5=0f0309faa15d9de82f3f1fd9de3d9681 \
+                    file://gecko-dev/third_party/rust/rust-argon2/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/siphasher/COPYING;md5=153a32c0d1da8118186f4b85d05e8d51 \
+                    file://gecko-dev/third_party/rust/redox_termios/LICENSE;md5=47f2f82c4fb1c90539d95f395aa39e44 \
+                    file://gecko-dev/third_party/rust/cstr/LICENSE;md5=ead1a0b12ad3434b78eb948fa6ecc861 \
+                    file://gecko-dev/third_party/rust/termion/LICENSE;md5=9c68b2ba8efa20b89280d2086bcab0ef \
+                    file://gecko-dev/third_party/rust/h2/LICENSE;md5=ee0484fdec4df15c41bd2b94f555a307 \
+                    file://gecko-dev/third_party/rust/miow/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/miow/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/winapi/LICENSE-MIT;md5=ce877806bd0aa1bd45ebd871ea48ffda \
+                    file://gecko-dev/third_party/rust/winapi/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/ansi_term/LICENCE;md5=299115c023c32522d7cff133e90b7bb5 \
+                    file://gecko-dev/third_party/rust/lucet-wasi/LICENSE.cloudabi-utils;md5=74c95c9e274cd189bc45b21f4bd278f6 \
+                    file://gecko-dev/third_party/rust/lucet-wasi/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/lucet-wasi/LICENSE.wasmtime;md5=4b51c84a848a71552dd78afccab2d763 \
+                    file://gecko-dev/third_party/rust/futures-sink/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-sink/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/warp/LICENSE;md5=e554eecd2ec5b21c16e4d4823715a032 \
+                    file://gecko-dev/third_party/rust/peek-poke/LICENSE-MIT;md5=a3a122bd021649feab1523e3e300f102 \
+                    file://gecko-dev/third_party/rust/peek-poke/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/parking_lot_core/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/parking_lot_core/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/scroll/LICENSE;md5=d983722a1f91cd152a6c423d2d349424 \
+                    file://gecko-dev/third_party/rust/rand_pcg/COPYRIGHT;md5=86438b2332d07437f7ddc2fe9fe4edd2 \
+                    file://gecko-dev/third_party/rust/rand_pcg/LICENSE-MIT;md5=881dc4888abbdf1a2ef0f1e9b3b1d054 \
+                    file://gecko-dev/third_party/rust/rand_pcg/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/target-lexicon-0.9.0/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/semver-parser/LICENSE-MIT;md5=3df30927b0155866d64484f43d413183 \
+                    file://gecko-dev/third_party/rust/semver-parser/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/bindgen/LICENSE;md5=0b9a98cb3dcdefcceb145324693fda9b \
+                    file://gecko-dev/third_party/rust/lazycell/LICENSE-MIT;md5=95a8d572a5e723e58de502e9ddab7cb5 \
+                    file://gecko-dev/third_party/rust/lazycell/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/rental/LICENSE-MIT;md5=4f930210697fc4ccf1cdeecacde9a9a5 \
+                    file://gecko-dev/third_party/rust/rental/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/socket2/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/socket2/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/bytes/LICENSE;md5=b9ef559d4c4c1ecee0a5d244a3658efa \
+                    file://gecko-dev/third_party/rust/generic-array/LICENSE;md5=4f5440fc36880eddb488ce08b1542a0a \
+                    file://gecko-dev/third_party/rust/iovec/LICENSE-MIT;md5=1b086dd5732cd6e5eda599073eac5d8d \
+                    file://gecko-dev/third_party/rust/iovec/LICENSE-APACHE;md5=e1f4ddcf43d25a5df4582d0ab8d3a7ce \
+                    file://gecko-dev/third_party/rust/core-foundation/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/core-foundation/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/paste-impl/LICENSE-MIT;md5=bcc5775669cb6a43b1b9eae56039a8f0 \
+                    file://gecko-dev/third_party/rust/paste-impl/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/png/LICENSE-MIT;md5=11b2cc5783fa8cb216eda68337628c84 \
+                    file://gecko-dev/third_party/rust/png/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/filetime_win/LICENSE-MIT;md5=a577ac3a0cc78be37802a0e3b131a383 \
+                    file://gecko-dev/third_party/rust/filetime_win/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/url/LICENSE-MIT;md5=d188c55b194c6aaf8738d1b9a8934007 \
+                    file://gecko-dev/third_party/rust/url/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/redox_syscall/LICENSE;md5=11a66ec2e8b153714f9ebd640449b153 \
+                    file://gecko-dev/third_party/rust/weedle/LICENSE.md;md5=c25ef118f80badde5567c5aeb98c2700 \
+                    file://gecko-dev/third_party/rust/pkg-config/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/pkg-config/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/lru-cache/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/lru-cache/LICENSE-APACHE;md5=8f7bb094c7232b058c7e9f2e431f389c \
+                    file://gecko-dev/third_party/rust/mach/LICENSE.md;md5=5b857591ef3c41e240ef50f35e120468 \
+                    file://gecko-dev/third_party/rust/cubeb-backend/LICENSE;md5=efe698607ad21a24642c691ac1ac1537 \
+                    file://gecko-dev/third_party/rust/libz-sys/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/libz-sys/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/libz-sys/src/zlib/contrib/dotzlib/LICENSE_1_0.txt;md5=81543b22c36f10d20ac9712f8d80ef8d \
+                    file://gecko-dev/third_party/rust/bitflags/LICENSE-MIT;md5=ef478836c78b81024b5f15620fce6806 \
+                    file://gecko-dev/third_party/rust/bitflags/LICENSE-APACHE;md5=1d13600d35d841f24921c4ba36a93f59 \
+                    file://gecko-dev/third_party/rust/num-derive/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/num-derive/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/sha2/LICENSE-MIT;md5=f4ccec4b9fbc0216b1de1d24a8fd91e0 \
+                    file://gecko-dev/third_party/rust/sha2/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/precomputed-hash/LICENSE;md5=038a8e190031b45e4fb9a7b17921658d \
+                    file://gecko-dev/third_party/rust/threadbound/LICENSE-MIT;md5=bcc5775669cb6a43b1b9eae56039a8f0 \
+                    file://gecko-dev/third_party/rust/threadbound/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/semver/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/semver/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/freetype/COPYRIGHT;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/freetype/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/freetype/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/unicode-width/COPYRIGHT;md5=37ace7095226db9416857c9ca8d1b090 \
+                    file://gecko-dev/third_party/rust/unicode-width/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/unicode-width/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/pin-project-lite/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/pin-project-lite/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/smallvec/LICENSE-MIT;md5=74813087164a1f74ce0dd6ad756b84c0 \
+                    file://gecko-dev/third_party/rust/smallvec/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/crossbeam-utils/LICENSE-MIT;md5=bfc135094473744ed4f9ac29560ea3e6 \
+                    file://gecko-dev/third_party/rust/crossbeam-utils/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/pin-project-internal/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/pin-project-internal/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/packed_simd/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/packed_simd/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/block-padding/LICENSE-MIT;md5=6ef1c6a1eba1aa3c36a26e0428825bfa \
+                    file://gecko-dev/third_party/rust/block-padding/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/lmdb-rkv/LICENSE;md5=747f152ed3cdf0867f468b9e9486824f \
+                    file://gecko-dev/third_party/rust/futures-core/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-core/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/anyhow/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/anyhow/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/log/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/log/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/c2-chacha/LICENSE-MIT;md5=f506965760cf1b01ce337cc6b6540d40 \
+                    file://gecko-dev/third_party/rust/c2-chacha/LICENSE-APACHE;md5=a0f1a51804617ebdf5b189ce33676cff \
+                    file://gecko-dev/third_party/rust/guid_win/LICENSE-MIT;md5=018260b3be7e736c152c756edd66261a \
+                    file://gecko-dev/third_party/rust/guid_win/LICENSE-APACHE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/futures-channel/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures-channel/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/opaque-debug/LICENSE-MIT;md5=7232afe8a77d9cd4478063ecb985e886 \
+                    file://gecko-dev/third_party/rust/opaque-debug/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/dirs-sys/LICENSE-MIT;md5=13dbcedc3bb56c9861982ad44e5cea65 \
+                    file://gecko-dev/third_party/rust/dirs-sys/LICENSE-APACHE;md5=8cc789b082b3d97e1ccc5261f8594d3f \
+                    file://gecko-dev/third_party/rust/arrayref/LICENSE;md5=2afb122eca5ad478e7e20a7b1428224c \
+                    file://gecko-dev/third_party/rust/parking_lot/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/parking_lot/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/unicode-normalization/COPYRIGHT;md5=37ace7095226db9416857c9ca8d1b090 \
+                    file://gecko-dev/third_party/rust/unicode-normalization/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/unicode-normalization/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cranelift-wasm/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/wincolor/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/wincolor/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/wincolor/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/cranelift-entity/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/uluru/LICENSE;md5=c7223505709c54a728afbc22d9e40946 \
+                    file://gecko-dev/third_party/rust/fnv/LICENSE-MIT;md5=f76c7bb172c274b7eb1e965545274644 \
+                    file://gecko-dev/third_party/rust/fnv/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/arrayvec/LICENSE-MIT;md5=21cd81010c808a785691bde0d90d6902 \
+                    file://gecko-dev/third_party/rust/arrayvec/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/darling_core/LICENSE;md5=5669b5b43b8d7c31fa445d94c5263ac8 \
+                    file://gecko-dev/third_party/rust/byteorder/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/byteorder/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/byteorder/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/lucet-runtime/LICENSE;md5=a1ba2b4c4f909ac0b517d8a37d2ac70f \
+                    file://gecko-dev/third_party/rust/cubeb/LICENSE;md5=efe698607ad21a24642c691ac1ac1537 \
+                    file://gecko-dev/third_party/rust/encoding_c_mem/COPYRIGHT;md5=96fd46586464d5ff028f59501e266bc3 \
+                    file://gecko-dev/third_party/rust/encoding_c_mem/LICENSE-MIT;md5=2200b0811d6a5488ac8691e89004f47c \
+                    file://gecko-dev/third_party/rust/encoding_c_mem/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/encoding_rs/COPYRIGHT;md5=6b6562870fb09865ff3e13b0f8531d79 \
+                    file://gecko-dev/third_party/rust/encoding_rs/LICENSE-MIT;md5=408a33e35d27e0e1be4cc703ceeacd9a \
+                    file://gecko-dev/third_party/rust/encoding_rs/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/euclid/COPYRIGHT;md5=bdacce252f1b00ec62d75ac7d42be627 \
+                    file://gecko-dev/third_party/rust/euclid/LICENSE-MIT;md5=00733b77a640d66dbb411057c7ea7299 \
+                    file://gecko-dev/third_party/rust/euclid/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/miow-0.2.1/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/miow-0.2.1/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/pin-project/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/pin-project/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/cubeb-pulse/LICENSE;md5=21251d8e173b07ab6ab56f9cf938d13d \
+                    file://gecko-dev/third_party/rust/prost/LICENSE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/libloading/LICENSE;md5=a80942724a5c3039604dd873666335fc \
+                    file://gecko-dev/third_party/rust/parity-wasm/LICENSE-MIT;md5=4c65a58dfb1a081bec9f204f97bc0092 \
+                    file://gecko-dev/third_party/rust/parity-wasm/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/fallible-iterator/LICENSE-MIT;md5=ffad7f53f855dcddbb2a4eba565709a7 \
+                    file://gecko-dev/third_party/rust/fallible-iterator/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/tokio-threadpool/LICENSE;md5=448c359b06622c5317ee59a95e89731c \
+                    file://gecko-dev/third_party/rust/fluent-langneg/LICENSE;md5=e3fc50a88d0a364313df4b21ef20c29e \
+                    file://gecko-dev/third_party/rust/winapi-util/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/winapi-util/LICENSE-MIT;md5=cf59a0b2d393d6e537a80e03b28c9785 \
+                    file://gecko-dev/third_party/rust/winapi-util/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/urlencoding/LICENSE;md5=092dfabdebd265174b112d75e7b367aa \
+                    file://gecko-dev/third_party/rust/rand_core/COPYRIGHT;md5=86438b2332d07437f7ddc2fe9fe4edd2 \
+                    file://gecko-dev/third_party/rust/rand_core/LICENSE-MIT;md5=08cf50287469d314ddbee33f572260a7 \
+                    file://gecko-dev/third_party/rust/rand_core/LICENSE-APACHE;md5=9ee8a33d3852b5a3d70f661d27bf3cc5 \
+                    file://gecko-dev/third_party/rust/coreaudio-sys/LICENSE;md5=8aeacaf3072ecad0df7c60621f5b3fc5 \
+                    file://gecko-dev/third_party/rust/plist/LICENCE;md5=27b6f367aa829ff19068448c26fb4edc \
+                    file://gecko-dev/third_party/rust/rustc-hash/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/rustc-hash/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/lazy_static/LICENSE-MIT;md5=d13d681ca7a3a8057993e4008037d598 \
+                    file://gecko-dev/third_party/rust/lazy_static/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/shift_or_euc/COPYRIGHT;md5=e7cebcec25a8df1fde26ad0b9c706bfe \
+                    file://gecko-dev/third_party/rust/shift_or_euc/LICENSE-MIT;md5=bdb2a6ce4f4a9875e74762c3809c8c04 \
+                    file://gecko-dev/third_party/rust/shift_or_euc/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/tokio-codec/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/tokio-io/LICENSE;md5=1ef3e0cf695d204b22428016534e7c74 \
+                    file://gecko-dev/third_party/rust/hyper/LICENSE;md5=ae809f4bd902cd7f6e2502229f86ae1c \
+                    file://gecko-dev/third_party/rust/version_check/LICENSE-MIT;md5=7f185439ef8c210f895ec32196f2ccc0 \
+                    file://gecko-dev/third_party/rust/version_check/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/indexmap/LICENSE-MIT;md5=df6e97e0d031ba78e58f93492b417a65 \
+                    file://gecko-dev/third_party/rust/indexmap/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/pkcs11/LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/regex/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/regex/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/regex/src/testdata/LICENSE;md5=29303077b607c58fcaf6fc3299effac1 \
+                    file://gecko-dev/third_party/rust/regex-syntax/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/regex-syntax/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/regex-syntax/src/unicode_tables/LICENSE-UNICODE;md5=bad79a926dbbb09a594f90fe6df33920 \
+                    file://gecko-dev/third_party/rust/miniz_oxide/LICENSE;md5=83b6b13d8885740c208cd448f189a679 \
+                    file://gecko-dev/third_party/rust/once_cell/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/once_cell/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/remove_dir_all/LICENCE-MIT;md5=36f945e62aea851bac1b1454303c46b7 \
+                    file://gecko-dev/third_party/rust/remove_dir_all/LICENCE-APACHE;md5=2d62690a9e60e5c0a6b063aa784c33df \
+                    file://gecko-dev/third_party/rust/line-wrap/LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/metal/LICENSE-MIT;md5=d13d681ca7a3a8057993e4008037d598 \
+                    file://gecko-dev/third_party/rust/metal/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/owning_ref/LICENSE;md5=2c08cb06c53f401ae43e223d1a037ddb \
+                    file://gecko-dev/third_party/rust/typenum/LICENSE;md5=e8e31985f27f4c10157ceb3de0217ead \
+                    file://gecko-dev/third_party/rust/crc32fast/LICENSE-MIT;md5=135fe2eeede8fd1e1b2913183ace2c2c \
+                    file://gecko-dev/third_party/rust/crc32fast/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/cfg-if/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/cfg-if/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/object/LICENSE-MIT;md5=e516598e75f45b29e773dc580b4b8979 \
+                    file://gecko-dev/third_party/rust/object/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/flate2/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/flate2/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/env_logger/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/env_logger/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/bincode/LICENSE.md;md5=cafd414f7148a2db38f774a19ec4dc62 \
+                    file://gecko-dev/third_party/rust/sha-1/LICENSE-MIT;md5=f4ccec4b9fbc0216b1de1d24a8fd91e0 \
+                    file://gecko-dev/third_party/rust/sha-1/LICENSE-APACHE;md5=a02fef6dccf840318474c108a8281b77 \
+                    file://gecko-dev/third_party/rust/unicase/LICENSE-MIT;md5=10447af5b068de84de293e9f919014bb \
+                    file://gecko-dev/third_party/rust/unicase/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/num_cpus/LICENSE-MIT;md5=1d2efa0443ed423114067351521101cc \
+                    file://gecko-dev/third_party/rust/num_cpus/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/ece/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/glean-core/LICENSE;md5=9741c346eef56131163e13b9db1241b3 \
+                    file://gecko-dev/third_party/rust/humantime/LICENSE-MIT;md5=17be2f3b21a3dfc40302bcee2aee54d4 \
+                    file://gecko-dev/third_party/rust/humantime/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/unicode-segmentation/COPYRIGHT;md5=37ace7095226db9416857c9ca8d1b090 \
+                    file://gecko-dev/third_party/rust/unicode-segmentation/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/unicode-segmentation/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/slab/LICENSE;md5=b9ef559d4c4c1ecee0a5d244a3658efa \
+                    file://gecko-dev/third_party/rust/walkdir/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/walkdir/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/walkdir/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/headers-core/LICENSE;md5=bf9532726134a5cddb0b9fb960c67029 \
+                    file://gecko-dev/third_party/rust/wast/LICENSE-MIT;md5=26f9f7326664c18be40341d92728adf3 \
+                    file://gecko-dev/third_party/rust/wast/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/glslopt/glsl-optimizer/license.txt;md5=17874c79edead2fbf9abaefeb5cb6440 \
+                    file://gecko-dev/third_party/rust/boxfnonce/LICENSE;md5=f751c231ea674cd48cfa7a743d93daf8 \
+                    file://gecko-dev/third_party/rust/strsim/LICENSE;md5=35f4cf2ddc7c578471859248cc7af439 \
+                    file://gecko-dev/third_party/rust/deflate/LICENSE-MIT;md5=f8c63238785e7e0ca110b323ac0e4481 \
+                    file://gecko-dev/third_party/rust/deflate/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/idna/LICENSE-MIT;md5=d188c55b194c6aaf8738d1b9a8934007 \
+                    file://gecko-dev/third_party/rust/idna/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/failure/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/failure/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/futures/LICENSE-MIT;md5=84dbe4d357da3fc0c825d8f51fb9261a \
+                    file://gecko-dev/third_party/rust/futures/LICENSE-APACHE;md5=e9bc874b120e4326c5a46b7332189c5f \
+                    file://gecko-dev/third_party/rust/rayon-core/LICENSE-MIT;md5=d13d681ca7a3a8057993e4008037d598 \
+                    file://gecko-dev/third_party/rust/rayon-core/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/textwrap/LICENSE;md5=c240bf9e37887f6653efc30e8be3740c \
+                    file://gecko-dev/third_party/rust/net2/LICENSE-MIT;md5=362255802eb5aa87810d12ddf3cfedb4 \
+                    file://gecko-dev/third_party/rust/net2/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cssparser-macros/LICENSE;md5=815ca599c9df247a0c7f619bab123dad \
+                    file://gecko-dev/third_party/rust/nom/LICENSE;md5=3a8cf0a877d7cb6a70c59ecbfea9e53d \
+                    file://gecko-dev/third_party/rust/raw-window-handle/LICENSE;md5=282bc152d4966c40da1ba922f2fabdcb \
+                    file://gecko-dev/third_party/rust/unicode-xid/COPYRIGHT;md5=37ace7095226db9416857c9ca8d1b090 \
+                    file://gecko-dev/third_party/rust/unicode-xid/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/unicode-xid/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/unreachable/LICENSE-MIT;md5=c43ab022ada9a6601f2e554d16a93709 \
+                    file://gecko-dev/third_party/rust/unreachable/LICENSE-APACHE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
+                    file://gecko-dev/third_party/rust/want/LICENSE;md5=e54b1e277342cd7a20e643d250597e81 \
+                    file://gecko-dev/third_party/rust/syn/LICENSE-MIT;md5=b377b220f43d747efdec40d69fcaa69d \
+                    file://gecko-dev/third_party/rust/syn/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/aho-corasick/COPYING;md5=034e2d49ef70c35b64be514bef39415a \
+                    file://gecko-dev/third_party/rust/aho-corasick/LICENSE-MIT;md5=8d0d0aa488af0ab9aafa3b85a7fc8e12 \
+                    file://gecko-dev/third_party/rust/aho-corasick/UNLICENSE;md5=7246f848faa4e9c9fc0ea91122d6e680 \
+                    file://gecko-dev/third_party/rust/atomic/LICENSE-MIT;md5=0b29d505d9225d1f0815cbdcf602b901 \
+                    file://gecko-dev/third_party/rust/atomic/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/tracy-rs/LICENSE;md5=0d7e39fb4b02ccb741452dfbd0b64aed \
+                    file://gecko-dev/third_party/rust/mime/LICENSE-MIT;md5=f4a102f2e59676dd8d0e68b12e0f477a \
+                    file://gecko-dev/third_party/rust/mime/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/scopeguard/LICENSE-MIT;md5=615cc94ba6f721c4ed3d6988605e85ca \
+                    file://gecko-dev/third_party/rust/scopeguard/LICENSE-APACHE;md5=1836efb2eb779966696f473ee8540542 \
+                    file://gecko-dev/third_party/rust/cubeb-sys/LICENSE;md5=efe698607ad21a24642c691ac1ac1537 \
+                    file://gecko-dev/third_party/rust/cubeb-sys/libcubeb/LICENSE;md5=21251d8e173b07ab6ab56f9cf938d13d \
+                    file://gecko-dev/third_party/rust/cubeb-sys/libcubeb/cmake/sanitizers-cmake/LICENSE;md5=aa2a60f1c9a6eedf1614f2441e641e90 \
+                    file://gecko-dev/third_party/rust/cubeb-sys/libcubeb/googletest/COPYING;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/third_party/rust/chardetng/COPYRIGHT;md5=3089ebdd4226fbe5ac194c8090f88cf2 \
+                    file://gecko-dev/third_party/rust/chardetng/LICENSE-MIT;md5=e1b9fcb0aa8b8f6dde5cc89bad887bf9 \
+                    file://gecko-dev/third_party/rust/chardetng/LICENSE-APACHE;md5=3b83ef96387f14655fc854ddc3c6bd57 \
+                    file://gecko-dev/third_party/rust/ordered-float/LICENSE-MIT;md5=23536a298d2ea9574cce356b6926b0d7 \
+                    file://gecko-dev/third_party/rust/murmurhash3/LICENSE;md5=2e82894154321fe8554d732d27a9c578 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/flightjs-example-app/LICENSE.md;md5=ad12f5f1cf9d2a96dc22cabd7c7c2b7a \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/flightjs-example-app/components/jasmine-flight/LICENSE.md;md5=2226fd7a71e236144ef6621778d81493 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/flightjs-example-app/components/es5-shim/LICENSE;md5=62c500b7887d3952690a7cde97904fb5 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/license.md;md5=04cd2e1a4592a5cf0fb07d2a8dcf3378 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/labs/architecture-examples/react/bower_components/director/LICENSE;md5=dc5385a0e48bd49ac891b68f3e445ee7 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/jquery/node_modules/director/LICENSE;md5=d09149fc1e5e5a1755e2523a9ca2253c \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/license.md;md5=3a5859c368f65a4172b05f65d9465999 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/director/LICENSE;md5=d09149fc1e5e5a1755e2523a9ca2253c \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/react/LICENSE;md5=11611eed3d95bd0552436a03a7508fc2 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/react-dom/LICENSE;md5=11611eed3d95bd0552436a03a7508fc2 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/architecture-examples/react/node_modules/classnames/LICENSE;md5=119b055838beecb4967f614754ac8c07 \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/dependency-examples/flight/flight/node_modules/flight/LICENSE;md5=6f33f59766d2e1dcc1439af6019f8caf \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/dependency-examples/flight/flight/node_modules/requirejs-text/LICENSE;md5=0c8175df773d3c268bc549c3fff8396b \
+                    file://gecko-dev/third_party/webkit/PerformanceTests/Speedometer/resources/todomvc/dependency-examples/flight/flight/node_modules/es5-shim/LICENSE;md5=62c500b7887d3952690a7cde97904fb5 \
+                    file://gecko-dev/third_party/aom/LICENSE;md5=6ea91368c1bbdf877159435572b931f5 \
+                    file://gecko-dev/third_party/aom/third_party/vector/LICENSE;md5=d7cc8509ab12ce8b6eb4a1399d801da6 \
+                    file://gecko-dev/third_party/aom/third_party/fastfeat/LICENSE;md5=8480bb83dde95468c1eaa998af144021 \
+                    file://gecko-dev/third_party/aom/third_party/libwebm/LICENSE.TXT;md5=6e8dee932c26f2dab503abf70c96d8bb \
+                    file://gecko-dev/third_party/aom/third_party/googletest/src/googletest/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
+                    file://gecko-dev/third_party/aom/third_party/x86inc/LICENSE;md5=6ef596ef35f3e31b07f19b156b83d3a7 \
+                    file://gecko-dev/intl/locales/lt/hyphenation/LICENSE;md5=706a85c90e9107abb2b21f07331fbb55 \
+                    file://gecko-dev/intl/locales/et/hyphenation/LICENSE;md5=de3941438c442ed144203907d79ea801 \
+                    file://gecko-dev/intl/locales/ru/hyphenation/LICENSE;md5=c50b91c34cac84778fecba2a8437144d \
+                    file://gecko-dev/intl/locales/is/hyphenation/LICENSE;md5=ae7d002271a2013239f7efbd514f9c1f \
+                    file://gecko-dev/intl/locales/hu/hyphenation/LICENSE;md5=877d19647f16c401f9fd9d395078e512 \
+                    file://gecko-dev/intl/locales/ia/hyphenation/LICENSE;md5=5b8c3ab6e974385d4f59f1efecae7b25 \
+                    file://gecko-dev/intl/locales/pt/hyphenation/LICENSE;md5=132160921ea615c88cafe0408f1a3d8b \
+                    file://gecko-dev/intl/locales/hr/hyphenation/LICENSE;md5=411fe09440a2ab5879dfd491ad0c35eb \
+                    file://gecko-dev/intl/locales/nn/hyphenation/LICENSE;md5=a54156ff83acd79431d33e28462f4b6f \
+                    file://gecko-dev/intl/locales/sh/hyphenation/LICENSE;md5=a2cde26e52828042ecfce44f7c6eaf53 \
+                    file://gecko-dev/intl/locales/de-CH/hyphenation/LICENSE;md5=e27acdf8622df2c1229a69adb2de922c \
+                    file://gecko-dev/intl/locales/ca/hyphenation/LICENSE;md5=d912ec9df5428f6bb98d9e0a837f02cd \
+                    file://gecko-dev/intl/locales/de-1901/hyphenation/LICENSE;md5=c0b6f745aea6370282e134c01795cc73 \
+                    file://gecko-dev/intl/locales/sl/hyphenation/LICENSE;md5=f30218233d650e639e46c2c4a94112d7 \
+                    file://gecko-dev/intl/locales/mn/hyphenation/LICENSE;md5=0fead8c8fdff139b3ee5470e9a9ce0e5 \
+                    file://gecko-dev/intl/locales/hsb/hyphenation/LICENSE;md5=86ba7f8ef010834595e58b72d3656556 \
+                    file://gecko-dev/intl/locales/uk/hyphenation/LICENSE;md5=7846d3076eaf48c92a47856b4e620b32 \
+                    file://gecko-dev/intl/locales/kmr/hyphenation/LICENSE;md5=0a3e26f3c4355d13ee6bb8ba60071207 \
+                    file://gecko-dev/intl/locales/de-1996/hyphenation/LICENSE;md5=16238ec2955082b6e7617d36318268c8 \
+                    file://gecko-dev/intl/locales/cy/hyphenation/LICENSE;md5=d7fd43b3292529564063182f42ae7c57 \
+                    file://gecko-dev/intl/locales/nb/hyphenation/LICENSE;md5=91c643d194d169f58144bf01df47d6a1 \
+                    file://gecko-dev/intl/locales/fr/hyphenation/LICENSE;md5=165309abc7b6ef2d430265f66e766a9a \
+                    file://gecko-dev/intl/locales/es/hyphenation/LICENSE;md5=cc678f16c37c4b15d50c1d4ac9fec988 \
+                    file://gecko-dev/intl/locales/eo/hyphenation/LICENSE;md5=77886665f98e33a19186c76fe64cb9e5 \
+                    file://gecko-dev/intl/locales/gl/hyphenation/LICENSE;md5=986b550db68110d130c6e4f2dc178ef8 \
+                    file://gecko-dev/intl/locales/fi/hyphenation/LICENSE;md5=802c0141608fc3b41f52f0e45f2bc1f9 \
+                    file://gecko-dev/intl/locales/tr/hyphenation/LICENSE;md5=5f3cad020c3b6286907a921cd9d2ec3e \
+                    file://gecko-dev/intl/locales/sv/hyphenation/LICENSE;md5=36084fd26c37dbbebebb2f8998d152a0 \
+                    file://gecko-dev/intl/locales/bg/hyphenation/LICENSE;md5=514fe9a3f7afc68bac17be7d9c4201b1 \
+                    file://gecko-dev/intl/locales/pl/hyphenation/LICENSE;md5=a0199b27915b2f725326ea175f7ab26c \
+                    file://gecko-dev/intl/locales/la/hyphenation/LICENSE;md5=fb9d7fc2e92452470f0910b949ac6380 \
+                    file://gecko-dev/intl/locales/af/hyphenation/LICENSE;md5=a4d242767898f12f4b5fbc5b6e208a95 \
+                    file://gecko-dev/intl/locales/nl/hyphenation/LICENSE;md5=2ed27342a38b34010ef370d882c520c2 \
+                    file://gecko-dev/intl/locales/it/hyphenation/LICENSE;md5=da949070c0435aaa7485456af44daca0 \
+                    file://gecko-dev/intl/locales/da/hyphenation/LICENSE;md5=a0cb5b7956e326ff8974be84dc9b6d4e \
+                    file://gecko-dev/other-licenses/bsdiff/LICENSE;md5=7c2ad392281bc3d9b04a31102ee7abdd \
+                    file://gecko-dev/other-licenses/nsis/Contrib/liteFirewall/License.txt;md5=daec7a9a7ebe9d3e287112d151a01e44 \
+                    file://gecko-dev/other-licenses/snappy/src/COPYING;md5=f62f3080324a97b3159a7a7e61812d0c"
+
+SRC_URI = "gitsm://github.com/sailfishos/gecko-dev;protocol=https;branch=master"
+
+# Modify these as desired
+PV = "1.0+git${SRCPV}"
+SRCREV = "${AUTOREV}"
+
+S = "${WORKDIR}/git"
+inherit autotools pkgconfig
+# NOTE: spec file indicates the license may be "MPL 2"
+# NOTE: no Makefile found, unable to determine what needs to be done
+
+#do_configure () {
+#	# Specify any needed configure commands here
+#	:
+#}
+#
+#do_compile () {
+#	# Specify compilation commands here
+#	:
+#}
+#
+#do_install () {
+#	# Specify install commands here
+#	:
+#}
+#
